@@ -44,39 +44,45 @@
 
 
 
-
-
 "use client";
 
 import { useEffect, useState } from "react";
 
 const DateTime = () => {
-  const [time, setTime] = useState("");  // Display string
+  const [time, setTime] = useState("");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+
+  // ✅ Common formatter (SINGLE SOURCE OF TRUTH)
+  const formatIST = (timestamp) =>
+    new Date(timestamp).toLocaleString("en-IN", {
+      timeZone: "Asia/Kolkata",
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      hour12: true,
+    });
 
   useEffect(() => {
     let serverTime = 0;
     let tickInterval;
     let syncInterval;
 
-    // Function to fetch server time
     const fetchServerTime = async () => {
       try {
         const res = await fetch("/api/currentDate", {
           cache: "no-store",
         });
         if (!res.ok) throw new Error("Failed to fetch server time");
-        const data = await res.json();
 
+        const data = await res.json();
         serverTime = data.timestamp;
 
-        // Update display immediately
-        setTime(
-          new Date(serverTime).toLocaleString("en-IN", {
-            timeZone: "Asia/Kolkata",
-          })
-        );
+        // ✅ Same formatter used here
+        setTime(formatIST(serverTime));
         setLoading(false);
         setError("");
       } catch (err) {
@@ -86,37 +92,18 @@ const DateTime = () => {
       }
     };
 
-    // Initial fetch
     fetchServerTime();
 
-    // Tick every second
     tickInterval = setInterval(() => {
       if (serverTime) {
-        serverTime += 1000; // increment 1 second
-        setTime(
-          // new Date(serverTime).toLocaleString("en-IN", {
-          //   timeZone: "Asia/Kolkata",
-          // })
-          new Date(serverTime).toLocaleString("en-IN", {
-            timeZone: "Asia/Kolkata",
-            day: "2-digit",
-            month: "2-digit",
-            year: "numeric",
-            hour: "2-digit",
-            minute: "2-digit",
-            second: "2-digit",
-            hour12: true
-          })
-        );
+        serverTime += 1000;
+        // ✅ Same formatter used here
+        setTime(formatIST(serverTime));
       }
     }, 1000);
 
-    // Auto-sync with server every 5 minutes (300000 ms)
-    syncInterval = setInterval(() => {
-      fetchServerTime();
-    }, 300000);
+    syncInterval = setInterval(fetchServerTime, 300000);
 
-    // Cleanup on component unmount
     return () => {
       clearInterval(tickInterval);
       clearInterval(syncInterval);
@@ -125,10 +112,6 @@ const DateTime = () => {
 
   if (loading) return <p>Loading current time...</p>;
   if (error) return <p>{error}</p>;
-
-  console.log("time: ", time);
-
-
 
   return (
     <div>
