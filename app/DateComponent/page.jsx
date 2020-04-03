@@ -53,7 +53,7 @@ const DateTime = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
-  // ✅ Common formatter (SINGLE SOURCE OF TRUTH)
+  // Common formatter (SINGLE SOURCE OF TRUTH)
   const formatIST = (timestamp) =>
     new Date(timestamp).toLocaleString("en-IN", {
       timeZone: "Asia/Kolkata",
@@ -81,7 +81,7 @@ const DateTime = () => {
         const data = await res.json();
         serverTime = data.timestamp;
 
-        // ✅ Same formatter used here
+        // Same formatter used here
         setTime(formatIST(serverTime));
         setLoading(false);
         setError("");
@@ -97,7 +97,7 @@ const DateTime = () => {
     tickInterval = setInterval(() => {
       if (serverTime) {
         serverTime += 1000;
-        // ✅ Same formatter used here
+        // Same formatter used here
         setTime(formatIST(serverTime));
       }
     }, 1000);
@@ -114,9 +114,8 @@ const DateTime = () => {
   if (error) return <p>{error}</p>;
 
   return (
-    <div>
-      <h2>Current IST Time:</h2>
-      <p>{time}</p>
+    <div className="flex justify-end w-full font-bold text-xl px-3">
+      <h2>{time}</h2>
     </div>
   );
 };
