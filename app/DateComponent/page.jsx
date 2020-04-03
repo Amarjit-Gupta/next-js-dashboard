@@ -43,27 +43,33 @@
 
 
 
-
 "use client";
 
 import { useEffect, useState } from "react";
 
 const DateTime = () => {
+  const [date, setDate] = useState("");
   const [time, setTime] = useState("");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
-  // Common formatter (SINGLE SOURCE OF TRUTH)
-  const formatIST = (timestamp) =>
-    new Date(timestamp).toLocaleString("en-IN", {
+  // ✅ Date formatter
+  const formatDateIST = (timestamp) =>
+    new Date(timestamp).toLocaleDateString("en-IN", {
       timeZone: "Asia/Kolkata",
       day: "2-digit",
       month: "2-digit",
       year: "numeric",
+    });
+
+  // ✅ Time formatter
+  const formatTimeIST = (timestamp) =>
+    new Date(timestamp).toLocaleTimeString("en-IN", {
+      timeZone: "Asia/Kolkata",
       hour: "2-digit",
       minute: "2-digit",
       second: "2-digit",
-      hour12: true,
+      hour12: false,
     });
 
   useEffect(() => {
@@ -81,8 +87,8 @@ const DateTime = () => {
         const data = await res.json();
         serverTime = data.timestamp;
 
-        // Same formatter used here
-        setTime(formatIST(serverTime));
+        setDate(formatDateIST(serverTime));
+        setTime(formatTimeIST(serverTime));
         setLoading(false);
         setError("");
       } catch (err) {
@@ -97,8 +103,8 @@ const DateTime = () => {
     tickInterval = setInterval(() => {
       if (serverTime) {
         serverTime += 1000;
-        // Same formatter used here
-        setTime(formatIST(serverTime));
+        setDate(formatDateIST(serverTime));
+        setTime(formatTimeIST(serverTime));
       }
     }, 1000);
 
@@ -114,8 +120,9 @@ const DateTime = () => {
   if (error) return <p>{error}</p>;
 
   return (
-    <div className="flex justify-end w-full font-bold text-xl px-3">
-      <h2>{time}</h2>
+    <div className="flex justify-end w-full font-bold text-xl px-3 gap-6">
+      <span>Date: {date}</span>
+      <span>Time: {time}</span>
     </div>
   );
 };
