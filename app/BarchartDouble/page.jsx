@@ -83,7 +83,7 @@ const BarChartDouble = () => {
     <div className="bg-white p-3 rounded-xl border w-full min-w-0 flex flex-col shadow-sm hover:shadow-lg border-gray-200 transition-shadow duration-500">
       <h2 className="text-lg font-semibold mb-3">visitors web total : 56845</h2>
       <div className="w-full min-w-0 h-60 overflow-hidden">
-        <ResponsiveContainer width="100%" height={240}>
+        <ResponsiveContainer width="100%" height={240} className="border border-gray-300 h-full">
           <BarChart data={data} barCategoryGap="20%">
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="title" />
