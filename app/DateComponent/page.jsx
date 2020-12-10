@@ -94,8 +94,18 @@ const DateTime = () => {
       if (serverTime) {
         serverTime += 1000; // increment 1 second
         setTime(
+          // new Date(serverTime).toLocaleString("en-IN", {
+          //   timeZone: "Asia/Kolkata",
+          // })
           new Date(serverTime).toLocaleString("en-IN", {
             timeZone: "Asia/Kolkata",
+            day: "2-digit",
+            month: "2-digit",
+            year: "numeric",
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit",
+            hour12: true
           })
         );
       }
@@ -116,7 +126,9 @@ const DateTime = () => {
   if (loading) return <p>Loading current time...</p>;
   if (error) return <p>{error}</p>;
 
-  
+  console.log("time: ", time);
+
+
 
   return (
     <div>
