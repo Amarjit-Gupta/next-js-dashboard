@@ -126,7 +126,7 @@ import Total from "./Total/page";
 
 const App = () => {
   return (
-    <div className="h-screen bg-gray-100 p-3 grid grid-rows-[50px_1fr_0.5fr_1.2fr] overflow-hidden gap-4">
+    <div className="h-screen bg-gray-100 p-3 grid grid-rows-[40px_1fr_0.5fr_1.2fr] overflow-hidden gap-4">
 
       {/* HEADER */}
       <div className="border flex items-center">
