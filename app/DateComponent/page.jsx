@@ -53,7 +53,7 @@ const DateTime = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
-  // ✅ Date formatter
+  // Date formatter
   const formatDateIST = (timestamp) =>
     new Date(timestamp).toLocaleDateString("en-IN", {
       timeZone: "Asia/Kolkata",
@@ -62,15 +62,17 @@ const DateTime = () => {
       year: "numeric",
     });
 
-  // ✅ Time formatter
+  // Time formatter
   const formatTimeIST = (timestamp) =>
     new Date(timestamp).toLocaleTimeString("en-IN", {
-      timeZone: "Asia/Kolkata",
-      hour: "2-digit",
-      minute: "2-digit",
-      second: "2-digit",
-      hour12: false,
-    });
+        timeZone: "Asia/Kolkata",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: true,
+      })
+      .toUpperCase(); // AM/PM uppercase
+
 
   useEffect(() => {
     let serverTime = 0;
@@ -82,9 +84,12 @@ const DateTime = () => {
         const res = await fetch("/api/currentDate", {
           cache: "no-store",
         });
+
+        // console.log("res: ",res);
         if (!res.ok) throw new Error("Failed to fetch server time");
 
         const data = await res.json();
+        // console.log("date: ",data);
         serverTime = data.timestamp;
 
         setDate(formatDateIST(serverTime));
@@ -116,8 +121,8 @@ const DateTime = () => {
     };
   }, []);
 
-  if (loading) return <p>Loading current time...</p>;
-  if (error) return <p>{error}</p>;
+  if (loading) return <p className="w-full text-right px-3">Loading current time...</p>;
+  if (error) return <p className="w-full text-right px-3">{error}</p>;
 
   return (
     <div className="flex justify-end w-full font-bold text-xl px-3 gap-6">
