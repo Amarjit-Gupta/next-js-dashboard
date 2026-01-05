@@ -73,10 +73,10 @@ import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContaine
 
 const BarChartDouble = () => {
   const data = [
-    { title: "website", ctr: 4.5, cvr: 2.1 },
-    { title: "website", ctr: 6.2, cvr: 3.4 },
-    { title: "website", ctr: 5.8, cvr: 2.9 },
-    { title: "website", ctr: 5.8, cvr: 3.1 }
+    { title: "website", ctr: 18, cvr: 26 },
+    { title: "website", ctr: 20, cvr: 28 },
+    { title: "website", ctr: 22, cvr: 25 },
+    { title: "website", ctr: 25, cvr: 32.8 }
   ];
 
   return (
