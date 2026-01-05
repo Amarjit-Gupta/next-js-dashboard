@@ -151,7 +151,7 @@ const BarChartDouble = () => {
       </h2>
 
       <div className="w-full min-w-0 h-60 overflow-hidden">
-        <ResponsiveContainer width="100%" height={240}>
+        <ResponsiveContainer width="100%" height={240} className="border border-gray-200 h-full">
           <BarChart data={data} barCategoryGap="20%">
             <CartesianGrid strokeDasharray="3 3" />
 
