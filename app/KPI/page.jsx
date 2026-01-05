@@ -35,10 +35,10 @@ const KPI = ({ txt1, txt2, val1, val2 }) => {
 
   return (
     <div className="h-full">
-      <div className="bg-white h-full rounded-2xl p-3 shadow-sm border border-gray-200">
+      <div className="bg-white h-full rounded-xl p-3 border border-gray-200">
 
         <p>
-          <span className="text-gray-500 font-medium">{txt1}</span> :
+          <span className="text-gray-500 font-medium">{txt1}</span> :&nbsp;
 
           {!showSecond && <br />}
 

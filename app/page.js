@@ -129,15 +129,15 @@ const App = () => {
     <div className="h-screen bg-gray-100 p-3 grid grid-rows-[40px_1fr_0.5fr_1.2fr] overflow-hidden gap-4">
 
       {/* HEADER */}
-      <div className="border flex items-center">
+      <div className=" bg-white rounded-xl flex items-center border border-gray-200">
         <DateTime />
       </div>
 
       {/* ROW 1 : Charts */}
       <div className="grid grid-cols-3 gap-4 h-full">
-        <div className="border h-full"><BarChartDouble /></div>
-        <div className="border h-full"><BarChartSingle /></div>
-        <div className="border h-full"><Total /></div>
+        <div className="h-full"><BarChartDouble /></div>
+        <div className="h-full"><BarChartSingle /></div>
+        <div className="border h-full bg-white rounded-xl border-gray-200"><Total /></div>
       </div>
 
       {/* ROW 2 : KPI */}
@@ -147,24 +147,24 @@ const App = () => {
         <KPI txt1="Best Product" val1="xyz" />
         <KPI txt1="Revenue" val1={20} />
 
-         <div className="h-full border p-3 flex justify-between bg-white">
-          <div className="border flex flex-col justify-center gap-2 ">
+         <div className="h-full p-3 flex justify-between bg-white rounded-xl border border-gray-200">
+          <div className=" flex flex-col justify-center gap-2 bg-gray-100 rounded-lg px-1">
             <div className="border p-1 rounded-full h-9 w-9 ">p</div>
             <div className="border text-xl font-medium">999</div>
           </div>
-          <div className="border flex flex-col justify-center gap-2 ">
+          <div className=" flex flex-col justify-center gap-2 bg-gray-100 rounded-lg px-1">
             <div className="border p-1 rounded-full h-9 w-9">g</div>
             <div className="border text-xl font-medium">999</div>
           </div>
-          <div className="border flex flex-col justify-center gap-2 ">
+          <div className=" flex flex-col justify-center gap-2 bg-gray-100 rounded-lg px-1">
             <div className="border p-1 rounded-full h-9 w-9">b</div>
             <div className="border text-xl font-medium">999</div>
           </div>
-          <div className="border flex flex-col justify-center gap-2 ">
+          <div className=" flex flex-col justify-center gap-2 bg-gray-100 rounded-lg px-1">
             <div className="border p-1 rounded-full h-9 w-9">n</div>
             <div className="border text-xl font-medium">999</div>
           </div>
-          <div className="border flex flex-col justify-center gap-2 ">
+          <div className=" flex flex-col justify-center gap-2 bg-gray-100 rounded-lg px-1">
             <div className="border p-1 rounded-full h-9 w-9">y</div>
             <div className="border text-xl font-medium">999</div>
           </div>
@@ -175,24 +175,24 @@ const App = () => {
       <div className="grid grid-cols-3 gap-4 flex-1 overflow-hidden">
 
         {/* TodaysCreative */}
-        <div className="border p-2 flex flex-col h-full overflow-hidden">
+        <div className=" p-3 flex flex-col h-full overflow-hidden bg-white rounded-xl border border-gray-200">
           <TodaysCreative />
         </div>
 
         {/* Heading News + Carousel + Hashtags */}
-        <div className="border p-2 flex flex-col h-full overflow-hidden">
+        <div className=" p-3 flex flex-col h-full overflow-hidden bg-white rounded-xl  border border-gray-200">
           <h2 className="text-lg font-bold mb-2">Heading News</h2>
 
-          <div className="flex-1 flex gap-2 overflow-hidden">
+          <div className="flex-1 flex gap-3 overflow-hidden">
             {/* Carousel */}
             <div className="flex-1 overflow-hidden">
               <CarouselComponent />
             </div>
 
             {/* Trending Hashtags */}
-            <div className="flex-1 border">
+            <div className="flex-1 p-1 bg-gray-100 rounded-lg">
               <h3 className="font-semibold text-gray-500 py-0.5 text-center">Trending Hashtag</h3>
-              <ul className="list-disc pl-5 text-[16.5px] border">
+              <ul className="list-disc pl-5">
                 <li>hello</li>
                 <li>hello</li>
                 <li>hello</li>
@@ -200,6 +200,8 @@ const App = () => {
                 <li>hello</li>
                 <li>hello</li>
                 <li>hello</li>
+                <li>hello</li>
+
                 <li>hello</li>
               </ul>
             </div>
@@ -207,7 +209,7 @@ const App = () => {
         </div>
 
         {/* Emailer */}
-        <div className="border h-full overflow-hidden p-2">
+        <div className="h-full overflow-hidden p-3 bg-white rounded-xl border border-gray-200">
           <Emailer />
         </div>
 
