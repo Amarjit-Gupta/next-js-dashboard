@@ -1,5 +1,5 @@
 // "use client";
-// import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react"
 
 // const DateTime = () => {
 //   const [dateTime, setDateTime] = useState(null);
@@ -13,7 +13,7 @@
 //     return () => clearInterval(interval);
 //   }, []);
 
-//   if (!dateTime) return null; // ⛔ SSR mismatch prevent
+//   if (!dateTime) return null; // SSR mismatch prevent
 
 //   return (
 //     <div className="flex justify-end w-full gap-4 font-bold text-xl">

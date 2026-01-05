@@ -13,7 +13,7 @@
 //             <div className="border">dcd</div>
 //         </div>
 //     );
-// };
+// }
 
 // export default Emailer;
 

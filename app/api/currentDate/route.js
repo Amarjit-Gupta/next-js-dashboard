@@ -4,7 +4,7 @@ export const GET = (req) => {
   try {
     const now = new Date();
 
-    // UTC ISO & timestamp
+    // utc iso and timestamp
     const iso = now.toISOString();
     const timestamp = now.getTime();
 

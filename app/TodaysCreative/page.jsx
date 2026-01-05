@@ -76,7 +76,7 @@ const TodaysCreative = () => {
         </div> */}
   <div className="relative overflow-hidden rounded-lg border w-full">
   <Image
-    src="/R.jpeg"
+    src="/about.png"
     alt="Example image"
     fill
     className="object-cover"
@@ -88,7 +88,7 @@ const TodaysCreative = () => {
         {/* Image 2 */}
       <div className="relative overflow-hidden rounded-lg border w-full">
   <Image
-    src="/R.jpeg"
+    src="/about.png"
     alt="Example image"
     fill
     className="object-cover"

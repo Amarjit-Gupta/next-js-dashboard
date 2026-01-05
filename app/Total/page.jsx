@@ -23,7 +23,7 @@ const CardData = ({ title1, title2, value1, value2 }) => {
       {/* Icon */}
       <div className="h-16 w-16 rounded-full bg-gray-100 flex items-center justify-center border relative">
         <Image
-          src="/R.jpeg"
+          src="/about.png"
           alt="icon"
           fill
           className="object-cover rounded-full"

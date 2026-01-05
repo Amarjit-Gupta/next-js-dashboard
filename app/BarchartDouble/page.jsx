@@ -5,7 +5,7 @@
 
 //   const data = [
 //     {
-//       title: "promo1",
+//       title: "prom1",
 //       ctr: 4.5,
 //       cvr: 2.1
 //     },

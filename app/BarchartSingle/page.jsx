@@ -46,6 +46,6 @@ const BarChartSingle = () => {
       </div>
     </div>
   );
-};
+}
 
 export default BarChartSingle;

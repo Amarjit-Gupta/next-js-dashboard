@@ -2,7 +2,7 @@
 
 //   return (
 //     <div className="h-full">
-//       <div className="bg-white h-full rounded-2xl p-3 shadow-sm border border-gray-200 ">
+//       <div className="bg-white h-full rounded-2xl p-3 shadow-sm border border-gray-100 ">
 
 //         <p className="">
 //           <span className="text-gray-500 font-medium">{txt1}</span> :
