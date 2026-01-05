@@ -70,21 +70,21 @@ function CarouselComponent() {
         <div className="h-full flex items-center justify-center border border-red-500 ">
           <h3 className="text-center font-bold text-gray-500 py-0.5">Today</h3>
           <div className="flex-1 overflow-hidden border text-[17px]">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita repellat eius laborum ullam ducimus Lorem ipsum dolor sit Lorem ipsum dolor sit dolor sit Lorem ipsum dolor sit
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita repellat eius laborum ullam ducimus Lorem ipsum dolor sit Lorem ipsum dolor sit dolor sit Lorem ipsum dolor sit dolor sit dolor sit Lorem ipsum dolor sit
           </div>
         </div>
 
         <div className="h-full flex flex-col border">
           <h3 className="text-center font-bold text-gray-500 py-0.5">Month</h3>
           <div className="flex-1 overflow-hidden border text-[17px]">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita repellat eius laborum ullam ducimus Lorem ipsum dolor sit Lorem ipsum dolor sit dolor sit Lorem ipsum dolor sit
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita repellat eius laborum ullam ducimus Lorem ipsum dolor sit Lorem ipsum dolor sit dolor sit Lorem ipsum dolor sit dolor sit dolor sit Lorem ipsum dolor sit
           </div>
         </div>
 
         <div className="h-full flex flex-col border ">
           <h3 className="text-center font-bold text-gray-500 py-0.5">Year</h3>
           <div className="flex-1 overflow-hidden border text-[17px]">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita repellat eius laborum ullam ducimus Lorem ipsum dolor sit Lorem ipsum dolor sit dolor sit Lorem ipsum dolor sit
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita repellat eius laborum ullam ducimus Lorem ipsum dolor sit Lorem ipsum dolor sit dolor sit Lorem ipsum dolor sit dolor sit dolor sit Lorem ipsum dolor sit
           </div>
         </div>
       </Slider>
