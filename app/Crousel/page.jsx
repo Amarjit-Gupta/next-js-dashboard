@@ -66,8 +66,8 @@ function CarouselComponent() {
 
   return (
     <div className="h-full overflow-hidden">
-      <Slider {...settings} className="h-full">
-        <div className="h-full flex items-center justify-center bg-gray-100 rounded-lg p-1">
+      <Slider {...settings} className="h-full bg-gray-100">
+        <div className="h-full flex items-center justify-center rounded-lg p-1">
           <h3 className="text-center font-bold text-gray-500 py-0.5">Today</h3>
           <div className="flex-1 overflow-hidden">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita repellat eius laborum ullam ducimus Lorem ipsum dolor sit Lorem ipsum dolor sit dolor sit Lorem ipsum dolor sit dolor sit dolor sit Lorem ipsum dolor sit dolor sit Lorem ipsum

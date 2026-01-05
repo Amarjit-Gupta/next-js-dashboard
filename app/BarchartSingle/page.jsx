@@ -88,14 +88,21 @@ const BarChartSingle = () => {
         <ResponsiveContainer width="100%" height={240} className="border border-gray-200 h-full">
           <BarChart data={data}>
             <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="title" />
+            
+            <XAxis
+              dataKey="title"
+              interval={0}
+              tick={{ fontSize: 12 }}
+            />
+
             <YAxis />
             <Tooltip />
             <Legend />
 
-            <Bar dataKey="ctr" fill="#82ca9d" name="CTR">
+            <Bar dataKey="ctr" fill="#82ca9d" name="Count">
               <LabelList dataKey="ctr" position="top" />
             </Bar>
+            
           </BarChart>
         </ResponsiveContainer>
       </div>

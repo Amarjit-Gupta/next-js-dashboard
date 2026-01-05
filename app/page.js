@@ -148,24 +148,24 @@ const App = () => {
         <KPI txt1="Revenue" val1={20} />
 
          <div className="h-full p-3 flex justify-between bg-white rounded-xl border border-gray-200">
-          <div className=" flex flex-col justify-center gap-2 bg-gray-100 rounded-lg px-1">
-            <div className="border p-1 rounded-full h-9 w-9 ">p</div>
+          <div className=" flex flex-col justify-around bg-gray-100 rounded-lg px-1">
+            <div className=" p-1 rounded-full h-9 w-9 bg-[#ff6caf]"></div>
             <div className="border text-xl font-medium">999</div>
           </div>
-          <div className=" flex flex-col justify-center gap-2 bg-gray-100 rounded-lg px-1">
-            <div className="border p-1 rounded-full h-9 w-9">g</div>
+          <div className=" flex flex-col justify-around bg-gray-100 rounded-lg px-1">
+            <div className=" p-1 rounded-full h-9 w-9 bg-[#04c56b]"></div>
             <div className="border text-xl font-medium">999</div>
           </div>
-          <div className=" flex flex-col justify-center gap-2 bg-gray-100 rounded-lg px-1">
-            <div className="border p-1 rounded-full h-9 w-9">b</div>
+          <div className=" flex flex-col justify-around bg-gray-100 rounded-lg px-1">
+            <div className=" p-1 rounded-full h-9 w-9 bg-[#00b6cc]"></div>
             <div className="border text-xl font-medium">999</div>
           </div>
-          <div className=" flex flex-col justify-center gap-2 bg-gray-100 rounded-lg px-1">
-            <div className="border p-1 rounded-full h-9 w-9">n</div>
+          <div className=" flex flex-col justify-around bg-gray-100 rounded-lg px-1">
+            <div className=" p-1 rounded-full h-9 w-9 bg-[#4b7bf5]"></div>
             <div className="border text-xl font-medium">999</div>
           </div>
-          <div className=" flex flex-col justify-center gap-2 bg-gray-100 rounded-lg px-1">
-            <div className="border p-1 rounded-full h-9 w-9">y</div>
+          <div className=" flex flex-col justify-around bg-gray-100 rounded-lg px-1">
+            <div className=" p-1 rounded-full h-9 w-9 bg-[#ffcc00]"></div>
             <div className="border text-xl font-medium">999</div>
           </div>
         </div>
