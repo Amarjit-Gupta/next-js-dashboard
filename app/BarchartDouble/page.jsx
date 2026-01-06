@@ -109,7 +109,7 @@
 //               <LabelList dataKey="cvr" position="top" /> {/* formatter hata diya */}
 //             </Bar>
 
-            
+
 //           </BarChart>
 //         </ResponsiveContainer>
 //       </div>
@@ -160,6 +160,8 @@ const BarChartDouble = () => {
               dataKey="title"
               interval={0}
               tick={{ fontSize: 12 }}
+            // angle={-22}         // labels ko -45 degree rotate karo
+            // textAnchor="end"    // rotation ke saath alignment fix
             />
 
             <YAxis />
@@ -168,17 +170,17 @@ const BarChartDouble = () => {
 
             {/* Legend order fix */}
             <Legend
-               content={<CustomLegend />}
+              content={<CustomLegend />}
             />
 
             {/* Last month */}
             <Bar dataKey="ctr" fill="#3b82f6" name="Last month">
-              <LabelList dataKey="ctr" position="top"  />
+              <LabelList dataKey="ctr" position="top" />
             </Bar>
 
             {/* Current month */}
             <Bar dataKey="cvr" fill="#22c55e" name="Current month">
-              <LabelList dataKey="cvr" position="top"  />
+              <LabelList dataKey="cvr" position="top" />
             </Bar>
           </BarChart>
         </ResponsiveContainer>
