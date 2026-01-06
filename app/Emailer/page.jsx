@@ -59,11 +59,11 @@ const Emailer = () => {
 
                 <div className="flex-1 grid grid-cols-2 gap-2">
                     <div className=" flex flex-col justify-center px-1 bg-gray-100 rounded-lg">
-                        <p className="text-gray-500 text-[14px]">Best keyword:</p>
+                        <p className="text-gray-500">keyword:</p>
                         <p className="text-xl">65455</p>
                     </div>
                     <div className=" flex flex-col justify-center px-1 bg-gray-100 rounded-lg">
-                        <p className="text-gray-500 text-[14px]">Best Campaign:</p>
+                        <p className="text-gray-500">Campaign:</p>
                         <p className="text-xl">65455</p>
                     </div>
                     <div className=" flex flex-col justify-center px-1 bg-gray-100 rounded-lg">
