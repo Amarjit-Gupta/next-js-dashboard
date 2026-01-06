@@ -151,7 +151,7 @@ const BarChartDouble = () => {
       </h2>
 
       <div className="w-full min-w-0 h-60 overflow-hidden">
-        <ResponsiveContainer width="100%" height={240} className="border border-gray-200 h-full">
+        <ResponsiveContainer width="100%" height={280} className="border border-gray-200 h-full">
           <BarChart data={data} barCategoryGap="20%">
             <CartesianGrid strokeDasharray="3 3" />
 
@@ -159,10 +159,10 @@ const BarChartDouble = () => {
             <XAxis
               dataKey="title"
               interval={0}
-              tick={{ fontSize: 12 }}
+              tick={{ fontSize: 16 }}
             />
 
-            <YAxis />
+            <YAxis tick={{ fontSize: 16 }} />
 
             <Tooltip />
 
@@ -194,7 +194,7 @@ export default BarChartDouble;
 
 const CustomLegend = () => {
   return (
-    <div className="flex gap-4 text-sm justify-center">
+    <div className="flex gap-4 text-base justify-center">
       <div className="flex items-center gap-2">
         <span className="w-3 h-3 bg-blue-500 inline-block " />
         <span>Last month</span>

@@ -85,19 +85,19 @@ const BarChartSingle = () => {
       </h2>
 
       <div className="w-full min-w-0 h-60 overflow-hidden">
-        <ResponsiveContainer width="100%" height={240} className="border border-gray-200 h-full">
+        <ResponsiveContainer width="100%" height={280} className="border border-gray-200 h-full">
           <BarChart data={data}>
             <CartesianGrid strokeDasharray="3 3" />
             
             <XAxis
               dataKey="title"
               interval={0}
-              tick={{ fontSize: 12 }}
+              tick={{ fontSize: 16 }}
             />
 
-            <YAxis />
+            <YAxis tick={{ fontSize: 16 }} />
             <Tooltip />
-            <Legend />
+            <Legend wrapperStyle={{ fontSize: 16 }} />
 
             <Bar dataKey="ctr" fill="#82ca9d" name="Count">
               <LabelList dataKey="ctr" position="top" />

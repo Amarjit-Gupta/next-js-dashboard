@@ -126,10 +126,10 @@ import Total from "./Total/page";
 
 const App = () => {
   return (
-    <div className="h-screen bg-gray-100 p-3 grid grid-rows-[0.2fr_1fr_0.5fr_1.2fr]  gap-4">
+    <div id="tv-root" className="h-screen bg-gray-100 p-3 grid grid-rows-[0.15fr_0.9fr_0.45fr_1fr]  gap-4">
 
       {/* HEADER */}
-      <div className=" bg-white rounded-xl flex items-center border border-gray-200">
+      <div className=" bg-black text-white rounded-xl flex items-center border border-gray-200">
         <DateTime />
       </div>
 
