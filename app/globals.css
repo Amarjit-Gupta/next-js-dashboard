@@ -5,5 +5,5 @@
   width: 1920px;
   height: 1080px;
   transform: scale(0.6);
-  transform-origin: center;
+  /* transform-origin: center; */
 }
