@@ -126,7 +126,7 @@ import Total from "./Total/page";
 
 const App = () => {
   return (
-    <div className="h-screen bg-gray-100 p-3 grid grid-rows-[40px_1fr_0.5fr_1.2fr] overflow-hidden gap-4">
+    <div className="h-screen bg-gray-100 p-3 grid grid-rows-[0.2fr_1fr_0.5fr_1.2fr]  gap-4">
 
       {/* HEADER */}
       <div className=" bg-white rounded-xl flex items-center border border-gray-200">
@@ -193,16 +193,16 @@ const App = () => {
             <div className="flex-1 p-1 bg-gray-100 rounded-lg">
               <h3 className="font-semibold text-gray-500 py-0.5 text-center">Trending Hashtag</h3>
               <ul className="list-disc pl-5">
-                <li>hello</li>
-                <li>hello</li>
-                <li>hello</li>
-                <li>hello</li>
-                <li>hello</li>
-                <li>hello</li>
-                <li>hello</li>
-                <li>hello</li>
-
-                <li>hello</li>
+                <li>
+                  Lorem ipsum dolor sit amet
+                </li>
+                <li>Lorem ipsum dolor sit amet</li>
+                <li>Lorem ipsum dolor sit amet</li>
+                <li>Lorem ipsum dolor sit amet</li>
+                <li>Lorem ipsum dolor sit amet</li>
+                <li>Lorem ipsum dolor sit amet</li>
+                <li>Lorem ipsum dolor sit amet</li>
+                <li>Lorem ipsum dolor sit amet</li>
               </ul>
             </div>
           </div>

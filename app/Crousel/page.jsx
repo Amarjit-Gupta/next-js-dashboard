@@ -60,33 +60,96 @@ function CarouselComponent() {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 20000,
+    autoplaySpeed: 2000,
     pauseOnHover: true,
   };
 
   return (
     <div className="h-full overflow-hidden">
       <Slider {...settings} className="h-full bg-gray-100">
+
+        {/* 1 */}
         <div className="h-full flex items-center justify-center rounded-lg p-1">
-          <h3 className="text-center font-bold text-gray-500 py-0.5">Today</h3>
+          <h3 className="text-center font-bold text-gray-500 py-0.5">Today  1</h3>
           <div className="flex-1 overflow-hidden">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita repellat eius laborum ullam ducimus Lorem ipsum dolor sit Lorem ipsum dolor sit dolor sit Lorem ipsum dolor sit dolor sit dolor sit Lorem ipsum dolor sit dolor sit Lorem ipsum
           </div>
         </div>
 
-        <div className="h-full flex items-center justify-center bg-gray-100 rounded-lg p-1">
-          <h3 className="text-center font-bold text-gray-500 py-0.5">Month</h3>
+        {/* 2 */}
+        <div className="h-full flex items-center justify-center rounded-lg p-1">
+          <h3 className="text-center font-bold text-gray-500 py-0.5">Today  2</h3>
           <div className="flex-1 overflow-hidden">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita repellat eius laborum ullam ducimus Lorem ipsum dolor sit Lorem ipsum dolor sit dolor sit Lorem ipsum dolor sit dolor sit dolor sit Lorem ipsum dolor sit dolor sit Lorem ipsum
           </div>
         </div>
 
-        <div className="h-full flex items-center justify-center bg-gray-100 rounded-lg p-1">
-          <h3 className="text-center font-bold text-gray-500 py-0.5">Year</h3>
+        {/* 3 */}
+        <div className="h-full flex items-center justify-center rounded-lg p-1">
+          <h3 className="text-center font-bold text-gray-500 py-0.5">Today  3</h3>
           <div className="flex-1 overflow-hidden">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita repellat eius laborum ullam ducimus Lorem ipsum dolor sit Lorem ipsum dolor sit dolor sit Lorem ipsum dolor sit dolor sit dolor sit Lorem ipsum dolor sit dolor sit Lorem ipsum
           </div>
         </div>
+
+
+        {/* 4 */}
+        <div className="h-full flex items-center justify-center rounded-lg p-1">
+          <h3 className="text-center font-bold text-gray-500 py-0.5">Today  4</h3>
+          <div className="flex-1 overflow-hidden">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita repellat eius laborum ullam ducimus Lorem ipsum dolor sit Lorem ipsum dolor sit dolor sit Lorem ipsum dolor sit dolor sit dolor sit Lorem ipsum dolor sit dolor sit Lorem ipsum
+          </div>
+        </div>
+
+        {/* 5 */}
+        <div className="h-full flex items-center justify-center rounded-lg p-1">
+          <h3 className="text-center font-bold text-gray-500 py-0.5">Today  5</h3>
+          <div className="flex-1 overflow-hidden">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita repellat eius laborum ullam ducimus Lorem ipsum dolor sit Lorem ipsum dolor sit dolor sit Lorem ipsum dolor sit dolor sit dolor sit Lorem ipsum dolor sit dolor sit Lorem ipsum
+          </div>
+        </div>
+
+        {/* 6 */}
+        <div className="h-full flex items-center justify-center rounded-lg p-1">
+          <h3 className="text-center font-bold text-gray-500 py-0.5">Today  6</h3>
+          <div className="flex-1 overflow-hidden">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita repellat eius laborum ullam ducimus Lorem ipsum dolor sit Lorem ipsum dolor sit dolor sit Lorem ipsum dolor sit dolor sit dolor sit Lorem ipsum dolor sit dolor sit Lorem ipsum
+          </div>
+        </div>
+
+        {/* 7 */}
+        <div className="h-full flex items-center justify-center rounded-lg p-1">
+          <h3 className="text-center font-bold text-gray-500 py-0.5">Today  7</h3>
+          <div className="flex-1 overflow-hidden">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita repellat eius laborum ullam ducimus Lorem ipsum dolor sit Lorem ipsum dolor sit dolor sit Lorem ipsum dolor sit dolor sit dolor sit Lorem ipsum dolor sit dolor sit Lorem ipsum
+          </div>
+        </div>
+
+        {/* 8 */}
+        <div className="h-full flex items-center justify-center rounded-lg p-1">
+          <h3 className="text-center font-bold text-gray-500 py-0.5">Today  8</h3>
+          <div className="flex-1 overflow-hidden">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita repellat eius laborum ullam ducimus Lorem ipsum dolor sit Lorem ipsum dolor sit dolor sit Lorem ipsum dolor sit dolor sit dolor sit Lorem ipsum dolor sit dolor sit Lorem ipsum
+          </div>
+        </div>
+
+        {/* 9 */}
+        <div className="h-full flex items-center justify-center rounded-lg p-1">
+          <h3 className="text-center font-bold text-gray-500 py-0.5">Today  9</h3>
+          <div className="flex-1 overflow-hidden">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita repellat eius laborum ullam ducimus Lorem ipsum dolor sit Lorem ipsum dolor sit dolor sit Lorem ipsum dolor sit dolor sit dolor sit Lorem ipsum dolor sit dolor sit Lorem ipsum
+          </div>
+        </div>
+
+        {/* 10 */}
+        <div className="h-full flex items-center justify-center rounded-lg p-1">
+          <h3 className="text-center font-bold text-gray-500 py-0.5">Today  10</h3>
+          <div className="flex-1 overflow-hidden">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita repellat eius laborum ullam ducimus Lorem ipsum dolor sit Lorem ipsum dolor sit dolor sit Lorem ipsum dolor sit dolor sit dolor sit Lorem ipsum dolor sit dolor sit Lorem ipsum
+          </div>
+        </div>
+
+      
       </Slider>
     </div>
   );

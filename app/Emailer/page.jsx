@@ -71,7 +71,7 @@ const Emailer = () => {
                         <p className="text-xl">65455</p>
                     </div>
                     <div className=" flex flex-col justify-center px-1 bg-gray-100 rounded-lg">
-                        <p className="text-gray-500">Total Clicks:</p>
+                        <p className="text-gray-500">Competitor:</p>
                         <p className="text-xl">65455</p>
                     </div>
                 </div>
