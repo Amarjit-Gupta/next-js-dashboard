@@ -127,7 +127,7 @@ import Total from "./Total/page";
 const App = () => {
   return (
     // <div className="h-screen bg-gray-100 p-1 lg:p-3 grid grid-rows-[0.2fr_1fr_0.5fr_1.2fr] gap-4">
-    <div className="h-screen bg-gray-100 p-1 lg:p-3 grid grid-rows-[0.2fr_1fr_0.3fr_1.2fr] gap-1">
+    <div className="h-screen bg-gray-100 p-1 lg:p-3 grid grid-rows-[0.2fr_0.8fr_0.3fr_1.2fr] gap-1">
     {/* // <div className="bg-gray-100 p-3 m-auto flex flex-col gap-2"> */}
       {/* HEADER */}
       <div className=" bg-white rounded-xl flex items-center border border-gray-200">
@@ -148,26 +148,26 @@ const App = () => {
         <KPI txt1="Best Product" val1="xyz" />
         <KPI txt1="Revenue" val1={20} />
 
-        <div className="h-full p-1 flex justify-between bg-white rounded-xl border border-gray-200">
+        <div className="h-full p-1 lg:p-3 flex justify-between bg-white rounded-xl border border-gray-200">
           <div className=" flex flex-col justify-around bg-gray-100 rounded-lg px-1">
             <div className=" p-1 rounded-full h-4 w-4 lg:h-9 lg:w-9 bg-[#ff6caf]"></div>
-            <div className="border text-[10px] lg:text-xl font-medium">999</div>
+            <div className="text-[10px] lg:text-xl font-medium">999</div>
           </div>
           <div className=" flex flex-col justify-around bg-gray-100 rounded-lg px-1">
             <div className=" p-1 rounded-full h-4 w-4 lg:h-9 lg:w-9 bg-[#04c56b]"></div>
-            <div className="border  text-[10px] lg:text-xl  font-medium">999</div>
+            <div className=" text-[10px] lg:text-xl  font-medium">999</div>
           </div>
           <div className=" flex flex-col justify-around bg-gray-100 rounded-lg px-1">
             <div className=" p-1 rounded-full h-4 w-4 lg:h-9 lg:w-9 bg-[#00b6cc]"></div>
-            <div className="border  text-[10px] lg:text-xl  font-medium">999</div>
+            <div className=" text-[10px] lg:text-xl  font-medium">999</div>
           </div>
           <div className=" flex flex-col justify-around bg-gray-100 rounded-lg px-1">
             <div className=" p-1 rounded-full h-4 w-4 lg:h-9 lg:w-9 bg-[#4b7bf5]"></div>
-            <div className="border  text-[10px] lg:text-xl  font-medium">999</div>
+            <div className=" text-[10px] lg:text-xl  font-medium">999</div>
           </div>
           <div className=" flex flex-col justify-around bg-gray-100 rounded-lg px-1">
             <div className=" p-1 rounded-full h-4 w-4 lg:h-9 lg:w-9 bg-[#ffcc00]"></div>
-            <div className="border  text-[10px] lg:text-xl  font-medium">999</div>
+            <div className=" text-[10px] lg:text-xl  font-medium">999</div>
           </div>
         </div>
       </div>
