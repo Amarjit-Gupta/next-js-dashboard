@@ -71,11 +71,11 @@ import {
 
 const BarChartSingle = () => {
   const data = [
-    { title: "Insta", ctr: 4.5 },
-    { title: "Fb", ctr: 6.2 },
-    { title: "Li", ctr: 5.8 },
-    { title: "Yt", ctr: 5.8 },
-    { title: "Others", ctr: 5.8 },
+    { title: "IG", ctr: 4.5 },
+    { title: "FB", ctr: 6.2 },
+    { title: "LI", ctr: 5.8 },
+    { title: "YT", ctr: 5.8 },
+    { title: "Oth.", ctr: 5.8 },
   ];
 
   return (

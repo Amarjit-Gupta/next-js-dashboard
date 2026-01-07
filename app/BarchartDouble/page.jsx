@@ -138,10 +138,11 @@ import {
 
 const BarChartDouble = () => {
   const data = [
-    { title: "Cosmetics", ctr: 18, cvr: 26 },
+    { title: "PC", ctr: 18, cvr: 26 },
     { title: "Nutra", ctr: 20, cvr: 28 },
     { title: "Pharma", ctr: 22, cvr: 25 },
-    { title: "Engg.", ctr: 25, cvr: 32.8 }
+    { title: "Engg.", ctr: 25, cvr: 32.8 },
+     { title: "Encap", ctr: 18, cvr: 26 },
   ];
 
   return (

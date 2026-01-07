@@ -195,10 +195,10 @@ const App = () => {
               <h3 className="font-semibold text-gray-500 py-0.5 text-center">Trending Hashtag</h3>
               <ul className="list-disc pl-5 text-xs lg:text-xl">
                 <li>
-                  Lorem ipsum dolor sit amet
+                  Lorem ipsum dolor
                 </li>
-                <li>Lorem ipsum dolor sit amet</li>
-                <li>Lorem ipsum dolor sit amet</li>
+                <li>Lorem ipsum dolor</li>
+                <li>Lorem ipsum dolor</li>
                 
               </ul>
             </div>
