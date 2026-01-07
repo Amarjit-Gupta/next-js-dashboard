@@ -139,7 +139,7 @@ const App = () => {
         <div className="h-full"><BarChartDouble /></div>
         <div className="h-full"><BarChartSingle /></div>
         <div className="h-full border bg-white rounded-xl border-gray-200">
-          <div className="h-[40%] border">Hello
+          <div className="h-[36%] border">Hello
           </div>
           <div className=" "><Total/></div>
           
