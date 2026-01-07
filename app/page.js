@@ -138,7 +138,12 @@ const App = () => {
       <div className="grid grid-cols-3 gap-4 h-full">
         <div className="h-full"><BarChartDouble /></div>
         <div className="h-full"><BarChartSingle /></div>
-        <div className="border h-full bg-white rounded-xl border-gray-200"><Total /></div>
+        <div className="h-full border bg-white rounded-xl border-gray-200">
+          <div className="h-[20%] border">Hello
+          </div>
+          <div className=" "><Total/></div>
+          
+          </div>
       </div>
 
       {/* ROW 2 : KPI */}

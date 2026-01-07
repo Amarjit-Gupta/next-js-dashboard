@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Total = () => {
   return (
-    <div className="grid grid-cols-3 gap-3 h-full p-3">
+    <div className="grid grid-cols-3 gap-3 p-3">
       <CardData title1="Bounce" title2="Last month" value1={'45%'} value2={'50%'} icon="/frame-1.svg"/>
       <CardData title1="Eng. time" title2="Last month" value1={'20m'} value2={'20m'} icon="/frame-2.svg" />
       <CardData title1="Clicks" title2="Last month" value1={8} value2={15} icon="/frame-3.svg" />
@@ -35,14 +35,14 @@ const CardData = ({ title1, title2, value1, value2,icon }) => {
 
       {/* First metric */}
       <div className="text-center">
-        <p className="text-gray-500 font-medium text-xs lg:text-lg">{title1}</p>
-        <p className="text-xs font-medium lg:font-bold lg:text-lg">{value1}</p>
+        <p className="text-gray-500 font-medium text-xs lg:text-sm">{title1}</p>
+        <p className="text-xs font-medium lg:font-bold lg:text-sm">{value1}</p>
       </div>
 
       {/* Second metric */}
       <div className="text-center">
-        <p className="text-gray-500 font-medium text-xs lg:text-lg">{title2}</p>
-        <p className="text-xs font-medium lg:font-bold lg:text-lg">{value2}</p>
+        <p className="text-gray-500 font-medium text-xs lg:text-sm">{title2}</p>
+        <p className="text-xs font-medium lg:font-bold lg:text-sm">{value2}</p>
       </div>
     </div>
   );
