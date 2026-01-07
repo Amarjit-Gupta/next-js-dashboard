@@ -38,19 +38,19 @@ const KPI = ({ txt1, txt2, val1, val2 }) => {
       <div className="bg-white h-full rounded-xl p-3 border border-gray-200">
 
         <p>
-          <span className="text-gray-500 font-medium">{txt1}</span> :&nbsp;
+          <span className="text-gray-500 font-medium text-xs">{txt1}</span> :&nbsp;
 
           {!showSecond && <br />}
 
-          <span className="font-bold text-2xl">
+          <span className="font-bold text-xs lg:text-2xl">
             {val1}
           </span>
         </p>
 
         {showSecond && (
           <p className="mt-1">
-            <span className="text-gray-500 font-medium">{txt2}</span> :
-            <span className="font-bold text-2xl ml-1">{val2}</span>
+            <span className="text-gray-500 font-medium text-xs">{txt2}</span> :
+            <span className="font-bold text-xs lg:text-2xl ml-1">{val2}</span>
           </p>
         )}
 

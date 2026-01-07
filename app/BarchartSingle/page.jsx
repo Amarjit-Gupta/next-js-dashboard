@@ -81,11 +81,11 @@ const BarChartSingle = () => {
   return (
     <div className="bg-white p-3 rounded-xl border w-full min-w-0 flex flex-col border-gray-200">
       <h2 className="text-lg font-semibold mb-3">
-        Social impressions : 56465
+        Social impressions
       </h2>
 
-      <div className="w-full min-w-0 h-60 overflow-hidden">
-        <ResponsiveContainer width="100%" height={240} className="border border-gray-200 h-full">
+      <div className="w-full min-w-0 h-54 overflow-hidden">
+        <ResponsiveContainer width="100%" height={200} className="border border-gray-200 h-full">
           <BarChart data={data}>
             <CartesianGrid strokeDasharray="3 3" />
             

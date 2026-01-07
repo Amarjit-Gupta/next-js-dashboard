@@ -35,14 +35,14 @@ const CardData = ({ title1, title2, value1, value2,icon }) => {
 
       {/* First metric */}
       <div className="text-center border">
-        <p className="text-gray-500 font-medium">{title1}:</p>
-        <p className="text-2xl font-bold">{value1}</p>
+        <p className="text-gray-500 font-medium text-xs">{title1}:</p>
+        <p className="text-xs lg:text-2xl font-bold">{value1}</p>
       </div>
 
       {/* Second metric */}
       <div className="text-center border">
-        <p className="text-gray-500 font-medium">{title2}:</p>
-        <p className="text-2xl font-bold">{value2}</p>
+        <p className="text-gray-500 font-medium text-xs">{title2}:</p>
+        <p className="text-xs lg:text-2xl font-bold">{value2}</p>
       </div>
     </div>
   );

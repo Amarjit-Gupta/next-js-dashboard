@@ -35,20 +35,20 @@ const Emailer = () => {
 
                 <div className=" border-red-500 flex-1 grid grid-cols-2 gap-2">
                     <div className=" flex flex-col justify-center px-1 bg-gray-100 rounded-lg">
-                        <p className="text-gray-500">Total Send:</p>
-                        <p className="text-xl">65455</p>
+                        <p className="text-gray-500 text-xs wrap-break-word">Total Send:</p>
+                        <p className="text-xs lg:text-xl">65455</p>
                     </div>
                     <div className=" flex flex-col justify-center px-1 bg-gray-100 rounded-lg">
-                        <p className="text-gray-500 ">Click Rate:</p>
-                        <p className="text-xl">65455</p>
+                        <p className="text-gray-500  text-xs wrap-break-word">Click Rate:</p>
+                        <p className="text-xs lg:text-xl">65455</p>
                     </div>
                     <div className=" flex flex-col justify-center px-1 bg-gray-100 rounded-lg">
-                        <p className="text-gray-500 ">Open Rate:</p>
-                        <p className="text-xl">65455</p>
+                        <p className="text-gray-500  text-xs wrap-break-word">Open Rate:</p>
+                        <p className="text-xs lg:text-xl">65455</p>
                     </div>
                     <div className=" flex flex-col justify-center px-1 bg-gray-100 rounded-lg">
-                        <p className="text-gray-500 ">Subscribers:</p>
-                        <p className="text-xl">65455</p>
+                        <p className="text-gray-500  text-xs wrap-break-word">Subscribers:</p>
+                        <p className="text-xs lg:text-xl">65455</p>
                     </div>
                 </div>
             </div>
@@ -59,20 +59,20 @@ const Emailer = () => {
 
                 <div className="flex-1 grid grid-cols-2 gap-2">
                     <div className=" flex flex-col justify-center px-1 bg-gray-100 rounded-lg">
-                        <p className="text-gray-500">Keyword:</p>
-                        <p className="text-xl">65455</p>
+                        <p className="text-gray-500 text-xs wrap-break-word">Keyword:</p>
+                        <p className="text-xs lg:text-xl">65455</p>
                     </div>
                     <div className=" flex flex-col justify-center px-1 bg-gray-100 rounded-lg">
-                        <p className="text-gray-500">Campaign:</p>
-                        <p className="text-xl">65455</p>
+                        <p className="text-gray-500 text-xs wrap-break-word">Campaign:</p>
+                        <p className="text-xs lg:text-xl">65455</p>
                     </div>
                     <div className=" flex flex-col justify-center px-1 bg-gray-100 rounded-lg">
-                        <p className="text-gray-500">Ad Spent:</p>
-                        <p className="text-xl">65455</p>
+                        <p className="text-gray-500 text-xs">Ad Spent:</p>
+                        <p className="text-xs lg:text-xl">65455</p>
                     </div>
                     <div className=" flex flex-col justify-center px-1 bg-gray-100 rounded-lg">
-                        <p className="text-gray-500">Competitor:</p>
-                        <p className="text-xl">65455</p>
+                        <p className="text-gray-500 text-xs wrap-break-word">Competitor:</p>
+                        <p className="text-xs lg:text-xl">65455</p>
                     </div>
                 </div>
             </div>
