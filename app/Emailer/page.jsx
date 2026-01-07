@@ -29,7 +29,7 @@ const Emailer = () => {
 
             <div className="flex flex-col h-full">
 
-                <h1 className="font-bold text-xl mb-2">
+                <h1 className="font-medium text-xs lg:text-lg mb-2">
                     Emailer
                 </h1>
 
@@ -55,7 +55,7 @@ const Emailer = () => {
 
             <div className="flex flex-col h-full">
 
-                <h1 className="font-bold text-xl mb-2">Ad</h1>
+                <h1 className="font-medium text-xs lg:text-lg mb-2">Ad</h1>
 
                 <div className="flex-1 grid grid-cols-2 gap-2">
                     <div className=" flex flex-col justify-center px-1 bg-gray-100 rounded-lg">

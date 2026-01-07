@@ -57,7 +57,7 @@ const TodaysCreative = () => {
     <div className="h-full flex flex-col overflow-hidden">
 
       {/* Header – fixed height */}
-      <h2 className="font-bold text-xl mb-2">
+      <h2 className="font-medium text-xs lg:text-lg mb-2">
         Todays Creative
       </h2>
 

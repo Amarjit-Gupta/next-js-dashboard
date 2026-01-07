@@ -138,10 +138,10 @@ import {
 
 const BarChartDouble = () => {
   const data = [
-    { title: "Personal Care", ctr: 18, cvr: 26 },
-    { title: "Nutraceuticals", ctr: 20, cvr: 28 },
-    { title: "Pharmaceuticals", ctr: 22, cvr: 25 },
-    { title: "Engineering", ctr: 25, cvr: 32.8 }
+    { title: "Cosmetics", ctr: 18, cvr: 26 },
+    { title: "Nutra", ctr: 20, cvr: 28 },
+    { title: "Pharma", ctr: 22, cvr: 25 },
+    { title: "Engg.", ctr: 25, cvr: 32.8 }
   ];
 
   return (
@@ -153,19 +153,19 @@ const BarChartDouble = () => {
       <div className="w-full min-w-0 h-45 overflow-hidden">
         <ResponsiveContainer width="100%" height={170} className="border border-gray-200 h-full">
           <BarChart data={data} barCategoryGap="20%">
-            <CartesianGrid strokeDasharray="3 3" />
+            {/* <CartesianGrid strokeDasharray="3 3" /> */}
 
             {/* X Axis */}
             <XAxis
               dataKey="title"
               interval={0}
-              tick={{ fontSize: 10 }}
+              tick={{ fontSize: 10, fill: "black" }}
             // angle={-22}         // labels ko -45 degree rotate karo
             // textAnchor="end"    // rotation ke saath alignment fix
             />
 
             <YAxis interval={0}
-              tick={{ fontSize: 10 }}/>
+              tick={{ fontSize: 10,fill: "black"  }} />
 
             <Tooltip />
 
@@ -176,12 +176,12 @@ const BarChartDouble = () => {
 
             {/* Last month */}
             <Bar dataKey="ctr" fill="#3b82f6" name="Last month">
-              <LabelList dataKey="ctr" position="top" fontSize={12} />
+              <LabelList dataKey="ctr" position="top" fontSize={12} fill="black" />
             </Bar>
 
             {/* Current month */}
             <Bar dataKey="cvr" fill="#22c55e" name="Current month">
-              <LabelList dataKey="cvr" position="top" fontSize={12} />
+              <LabelList dataKey="cvr" position="top" fontSize={12} fill="black" />
             </Bar>
           </BarChart>
         </ResponsiveContainer>

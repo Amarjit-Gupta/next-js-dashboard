@@ -71,10 +71,10 @@ import {
 
 const BarChartSingle = () => {
   const data = [
-    { title: "Instagram", ctr: 4.5 },
-    { title: "Facebook", ctr: 6.2 },
-    { title: "Linkdin", ctr: 5.8 },
-    { title: "Youtube", ctr: 5.8 },
+    { title: "Insta", ctr: 4.5 },
+    { title: "Fb", ctr: 6.2 },
+    { title: "Li", ctr: 5.8 },
+    { title: "Yt", ctr: 5.8 },
     { title: "Others", ctr: 5.8 },
   ];
 
@@ -87,22 +87,22 @@ const BarChartSingle = () => {
       <div className="w-full min-w-0 h-45 overflow-hidden">
         <ResponsiveContainer width="100%" height={170} className="border border-gray-200 h-full">
           <BarChart data={data}>
-            <CartesianGrid strokeDasharray="3 3" />
+            {/* <CartesianGrid strokeDasharray="3 3" /> */}
             
             <XAxis
               dataKey="title"
               interval={0}
-              tick={{ fontSize: 12 }}
+              tick={{ fontSize: 12,fill: "black"  }}
             />
 
             <YAxis interval={0}
-              tick={{ fontSize: 12 }}/>
+              tick={{ fontSize: 12,fill: "black"  }}/>
             <Tooltip />
-            <Legend fontSize={12} />
+            <Legend content={<CustomLegend />} />
 
-            <Bar dataKey="ctr" fill="#82ca9d" name="Count">
+            <Bar dataKey="ctr" fill="#22c55e" name="Count">
               <LabelList dataKey="ctr" position="top"
-               fontSize={12} />
+               fontSize={12} fill="black" />
             </Bar>
             
           </BarChart>
@@ -113,3 +113,19 @@ const BarChartSingle = () => {
 };
 
 export default BarChartSingle;
+
+
+
+
+const CustomLegend = () => {
+  return (
+
+      <div className="flex items-center text-xs justify-center gap-2">
+        <span className="w-3 h-3 bg-green-500 inline-block " />
+        <span>Count</span>
+      </div>
+  
+  );
+};
+
+

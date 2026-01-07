@@ -143,7 +143,7 @@ const App = () => {
 
       {/* ROW 2 : KPI */}
       <div className="grid grid-cols-5 gap-4 h-full">
-        <KPI txt1="Total Leads" txt2="Last month same period" val1={20} val2={20} />
+        <KPI txt1="Total Leads" txt2="Last month" val1={20} val2={20} />
         <KPI txt1="Best Company" val1="xyz" />
         <KPI txt1="Best Product" val1="xyz" />
         <KPI txt1="Revenue" val1={20} />
@@ -182,7 +182,7 @@ const App = () => {
 
         {/* Heading News + Carousel + Hashtags */}
         <div className=" p-3 flex flex-col h-full overflow-hidden bg-white rounded-xl  border border-gray-200">
-          <h2 className="text-lg font-bold mb-2">Heading News</h2>
+          <h2 className="font-medium text-xs lg:text-lg mb-2">Heading News</h2>
 
           <div className="flex-1 flex gap-3 overflow-hidden">
             {/* Carousel */}
