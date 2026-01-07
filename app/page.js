@@ -127,7 +127,7 @@ import Total from "./Total/page";
 const App = () => {
   return (
     // <div className="h-screen bg-gray-100 p-3 grid grid-rows-[0.2fr_1fr_0.5fr_1.2fr] gap-4">
-    <div id="tv-root" className="bg-gray-100 p-3 m-auto flex flex-col gap-2">
+    <div className="bg-gray-100 p-3 m-auto flex flex-col gap-2">
       {/* HEADER */}
       <div className=" bg-white rounded-xl flex items-center border border-gray-200">
         <DateTime />
