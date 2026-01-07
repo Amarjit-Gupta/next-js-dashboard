@@ -146,12 +146,12 @@ const BarChartDouble = () => {
 
   return (
     <div className="bg-white p-3 rounded-xl border w-full min-w-0 flex flex-col border-gray-200">
-      <h2 className="text-lg font-semibold mb-3">
+      <h2 className="text-xs lg:text-lg font-semibold mb-3">
         visitors web total : 56845
       </h2>
 
-      <div className="w-full min-w-0 h-54 overflow-hidden">
-        <ResponsiveContainer width="100%" height={200} className="border border-gray-200 h-full">
+      <div className="w-full min-w-0 h-45 overflow-hidden">
+        <ResponsiveContainer width="100%" height={170} className="border border-gray-200 h-full">
           <BarChart data={data} barCategoryGap="20%">
             <CartesianGrid strokeDasharray="3 3" />
 
@@ -164,7 +164,8 @@ const BarChartDouble = () => {
             // textAnchor="end"    // rotation ke saath alignment fix
             />
 
-            <YAxis />
+            <YAxis interval={0}
+              tick={{ fontSize: 10 }}/>
 
             <Tooltip />
 
@@ -175,12 +176,12 @@ const BarChartDouble = () => {
 
             {/* Last month */}
             <Bar dataKey="ctr" fill="#3b82f6" name="Last month">
-              <LabelList dataKey="ctr" position="top" />
+              <LabelList dataKey="ctr" position="top" fontSize={12} />
             </Bar>
 
             {/* Current month */}
             <Bar dataKey="cvr" fill="#22c55e" name="Current month">
-              <LabelList dataKey="cvr" position="top" />
+              <LabelList dataKey="cvr" position="top" fontSize={12} />
             </Bar>
           </BarChart>
         </ResponsiveContainer>

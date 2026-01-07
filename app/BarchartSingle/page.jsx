@@ -80,12 +80,12 @@ const BarChartSingle = () => {
 
   return (
     <div className="bg-white p-3 rounded-xl border w-full min-w-0 flex flex-col border-gray-200">
-      <h2 className="text-lg font-semibold mb-3">
+      <h2 className="text-xs lg:text-lg font-semibold mb-3">
         Social impressions
       </h2>
 
-      <div className="w-full min-w-0 h-54 overflow-hidden">
-        <ResponsiveContainer width="100%" height={200} className="border border-gray-200 h-full">
+      <div className="w-full min-w-0 h-45 overflow-hidden">
+        <ResponsiveContainer width="100%" height={170} className="border border-gray-200 h-full">
           <BarChart data={data}>
             <CartesianGrid strokeDasharray="3 3" />
             
@@ -95,12 +95,14 @@ const BarChartSingle = () => {
               tick={{ fontSize: 12 }}
             />
 
-            <YAxis />
+            <YAxis interval={0}
+              tick={{ fontSize: 12 }}/>
             <Tooltip />
-            <Legend />
+            <Legend fontSize={12} />
 
             <Bar dataKey="ctr" fill="#82ca9d" name="Count">
-              <LabelList dataKey="ctr" position="top" />
+              <LabelList dataKey="ctr" position="top"
+               fontSize={12} />
             </Bar>
             
           </BarChart>
