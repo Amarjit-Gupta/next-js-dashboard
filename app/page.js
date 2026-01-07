@@ -139,7 +139,7 @@ const App = () => {
         <div className="h-full"><BarChartDouble /></div>
         <div className="h-full"><BarChartSingle /></div>
         <div className="h-full border bg-white rounded-xl border-gray-200">
-          <div className="h-[34%] border p-2 text-2xl font-bold">Great marketing happens when creativity meets consistency.
+          <div className="h-[34%] border p-2 text-xl font-bold">Great marketing happens when creativity meets consistency.
           </div>
           <div className=" "><Total/></div>
           
