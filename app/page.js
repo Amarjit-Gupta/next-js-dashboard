@@ -193,7 +193,7 @@ const App = () => {
             {/* Trending Hashtags */}
             <div className="flex-1 p-1 bg-gray-100 rounded-lg">
               <h3 className="font-semibold text-gray-500 py-0.5 text-center">Trending Hashtag</h3>
-              <ul className="list-disc pl-5 text-xs">
+              <ul className="list-disc pl-5 text-xs lg:text-xl">
                 <li>
                   Lorem ipsum dolor sit amet
                 </li>

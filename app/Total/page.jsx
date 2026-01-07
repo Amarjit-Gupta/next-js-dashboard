@@ -21,7 +21,7 @@ const CardData = ({ title1, title2, value1, value2,icon }) => {
     <div className="bg-gray-100 shadow-xs rounded-lg p-2 flex flex-col justify-around items-center">
 
       {/* Icon */}
-      <div className="h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center relative">
+      <div className="h-10 lg:h-20 w-10 lg:w-20 rounded-full bg-gray-100 flex items-center justify-center relative">
         <Image
           src={icon}
           alt="icon"
@@ -35,14 +35,14 @@ const CardData = ({ title1, title2, value1, value2,icon }) => {
 
       {/* First metric */}
       <div className="text-center">
-        <p className="text-gray-500 font-medium text-xs">{title1}</p>
-        <p className="text-xs font-medium lg:font-bold">{value1}</p>
+        <p className="text-gray-500 font-medium text-xs lg:text-lg">{title1}</p>
+        <p className="text-xs font-medium lg:font-bold lg:text-lg">{value1}</p>
       </div>
 
       {/* Second metric */}
       <div className="text-center">
-        <p className="text-gray-500 font-medium text-xs">{title2}</p>
-        <p className="text-xs font-medium lg:font-bold">{value2}</p>
+        <p className="text-gray-500 font-medium text-xs lg:text-lg">{title2}</p>
+        <p className="text-xs font-medium lg:font-bold lg:text-lg">{value2}</p>
       </div>
     </div>
   );

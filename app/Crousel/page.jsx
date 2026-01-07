@@ -71,7 +71,7 @@ function CarouselComponent() {
         {/* 1 */}
         <div className="h-full flex items-center justify-center rounded-lg p-1">
           <h3 className="text-center font-bold text-gray-500 py-0.5">Today  1</h3>
-          <div className="flex-1 overflow-hidden text-xs">
+          <div className="flex-1 overflow-hidden text-xs lg:text-xl">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita repellat eius laborum ullam ducimus Lorem ipsum
           </div>
         </div>
@@ -79,7 +79,7 @@ function CarouselComponent() {
         {/* 2 */}
         <div className="h-full flex items-center justify-center rounded-lg p-1">
           <h3 className="text-center font-bold text-gray-500 py-0.5">Today  2</h3>
-          <div className="flex-1 overflow-hidden text-xs">
+          <div className="flex-1 overflow-hidden text-xs lg:text-xl">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita repellat eius laborum ullam ducimus Lorem ipsum
           </div>
         </div>
@@ -87,7 +87,7 @@ function CarouselComponent() {
         {/* 3 */}
         <div className="h-full flex items-center justify-center rounded-lg p-1">
           <h3 className="text-center font-bold text-gray-500 py-0.5">Today  3</h3>
-          <div className="flex-1 overflow-hidden text-xs">
+          <div className="flex-1 overflow-hidden text-xs lg:text-xl">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita repellat eius laborum ullam ducimus Lorem ipsum
           </div>
         </div>
@@ -96,7 +96,7 @@ function CarouselComponent() {
         {/* 4 */}
         <div className="h-full flex items-center justify-center rounded-lg p-1">
           <h3 className="text-center font-bold text-gray-500 py-0.5">Today  4</h3>
-          <div className="flex-1 overflow-hidden text-xs">
+          <div className="flex-1 overflow-hidden text-xs lg:text-xl">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita repellat eius laborum ullam ducimus Lorem ipsum
           </div>
         </div>
@@ -104,7 +104,7 @@ function CarouselComponent() {
         {/* 5 */}
         <div className="h-full flex items-center justify-center rounded-lg p-1">
           <h3 className="text-center font-bold text-gray-500 py-0.5">Today  5</h3>
-          <div className="flex-1 overflow-hidden text-xs">
+          <div className="flex-1 overflow-hidden text-xs lg:text-xl">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita repellat eius laborum ullam ducimus Lorem ipsum
           </div>
         </div>
@@ -112,7 +112,7 @@ function CarouselComponent() {
         {/* 6 */}
         <div className="h-full flex items-center justify-center rounded-lg p-1">
           <h3 className="text-center font-bold text-gray-500 py-0.5">Today  6</h3>
-          <div className="flex-1 overflow-hidden text-xs">
+          <div className="flex-1 overflow-hidden text-xs lg:text-xl">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita repellat eius laborum ullam ducimus Lorem ipsum
           </div>
         </div>
@@ -120,7 +120,7 @@ function CarouselComponent() {
         {/* 7 */}
         <div className="h-full flex items-center justify-center rounded-lg p-1">
           <h3 className="text-center font-bold text-gray-500 py-0.5">Today  7</h3>
-          <div className="flex-1 overflow-hidden text-xs">
+          <div className="flex-1 overflow-hidden text-xs lg:text-xl">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita repellat eius laborum ullam ducimus Lorem ipsum
           </div>
         </div>
@@ -128,7 +128,7 @@ function CarouselComponent() {
         {/* 8 */}
         <div className="h-full flex items-center justify-center rounded-lg p-1">
           <h3 className="text-center font-bold text-gray-500 py-0.5">Today  8</h3>
-          <div className="flex-1 overflow-hidden text-xs">
+          <div className="flex-1 overflow-hidden text-xs lg:text-xl">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita repellat eius laborum ullam ducimus Lorem ipsum
           </div>
         </div>
@@ -136,7 +136,7 @@ function CarouselComponent() {
         {/* 9 */}
         <div className="h-full flex items-center justify-center rounded-lg p-1">
           <h3 className="text-center font-bold text-gray-500 py-0.5">Today  9</h3>
-          <div className="flex-1 overflow-hidden text-xs">
+          <div className="flex-1 overflow-hidden text-xs lg:text-xl">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita repellat eius laborum ullam ducimus Lorem ipsum
           </div>
         </div>
@@ -144,7 +144,7 @@ function CarouselComponent() {
         {/* 10 */}
         <div className="h-full flex items-center justify-center rounded-lg p-1">
           <h3 className="text-center font-bold text-gray-500 py-0.5">Today  10</h3>
-          <div className="flex-1 overflow-hidden text-xs">
+          <div className="flex-1 overflow-hidden text-xs lg:text-xl">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita repellat eius laborum ullam ducimus Lorem ipsum
           </div>
         </div>
