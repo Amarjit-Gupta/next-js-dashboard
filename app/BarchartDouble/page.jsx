@@ -186,7 +186,7 @@ const BarChartDouble = () => {
         (item) => item.id !== "08458e02-892f-40e9-897b-21e750a5d499"
       )
       .map((itm) => ({
-        title: nameShortMap[itm.name] || itm.name, // 👈 short name
+        title: nameShortMap[itm.name] || itm.name, // short name
         lastMonth: itm.active_users_yesterday,
         currentMonth: itm.active_users_today
       }));
@@ -225,6 +225,7 @@ const BarChartDouble = () => {
             <YAxis tick={{ fontSize: 10, fill: "black" }}>
               <Label
                 value="Impressions"
+                fill="black"
                 angle={-90}
                 position="insideLeft"
                 offset={15}
@@ -237,12 +238,12 @@ const BarChartDouble = () => {
 
             {/* Last month */}
             <Bar dataKey="lastMonth" fill="#3b82f6" name="Last month">
-              <LabelList dataKey="lastMonth" position="top" fontSize={10} />
+              <LabelList dataKey="lastMonth" position="top" fontSize={10} fill="black" />
             </Bar>
 
             {/* Current month */}
             <Bar dataKey="currentMonth" fill="#22c55e" name="Current month">
-              <LabelList dataKey="currentMonth" position="top" fontSize={10} />
+              <LabelList dataKey="currentMonth" position="top" fontSize={10} fill="black" />
             </Bar>
           </BarChart>
         </ResponsiveContainer>
