@@ -199,7 +199,7 @@ const BarChartDouble = () => {
   }, []);
 
 
-  // console.log("social: ",socialData);
+  console.log("social: ",socialData);
 
 
 
@@ -242,7 +242,7 @@ const BarChartDouble = () => {
 
             {/* Current month */}
             <Bar dataKey="currentMonth" fill="#22c55e" name="Current month">
-              <LabelList dataKey="currentMonth"  position="top" fontSize={10} />
+              <LabelList dataKey="currentMonth" position="top" fontSize={10} />
             </Bar>
           </BarChart>
         </ResponsiveContainer>

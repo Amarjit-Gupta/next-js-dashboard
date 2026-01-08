@@ -76,6 +76,7 @@ const BarChartSingle = () => {
     { title: "FB", ctr: 6.2 },
     { title: "LI", ctr: 5.8 },
     { title: "YT", ctr: 5.8 },
+    { title: "PT", ctr: 6.8 },
     { title: "Oth.", ctr: 5.8 },
   ];
 
