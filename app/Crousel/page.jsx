@@ -26,14 +26,14 @@
 //                 <div className="border ">
 //                     <h3 className="border text-center font-bold text-gray-500 py-0.5">Month</h3>
 //                     <div className="overflow-hidden rounded-lg border px-2">
-                        
+
 //                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita repellat eius laborum ullam ducimus debitis porro d
 //                     </div>
 //                 </div>
 //                 <div className="border ">
 //                     <h3 className="border text-center font-bold text-gray-500 py-0.5">Year</h3>
 //                     <div className="overflow-hidden rounded-lg border px-2">
-                       
+
 //                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita repellat eius laborum ullam ducimus debitis p
 //                     </div>
 //                 </div>
@@ -52,6 +52,7 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import { useEffect, useState } from "react";
 
 function CarouselComponent() {
   const settings = {
@@ -60,94 +61,55 @@ function CarouselComponent() {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 20000,
     pauseOnHover: true,
   };
+
+
+  const [newsData, setNewsData] = useState([]);
+
+
+
+  const getNews = async () => {
+    try {
+      let result = await fetch("https://marketing-dashboard.integerstech.com/analyze/trends/global-news/latest");
+      let data = await result.json();
+      //  console.log("iamges--1: ",data);
+      const newsArray = data
+        .split("\n")                 // newline se split
+        .map(item => item.trim())    // extra spaces hatao
+        .filter(Boolean);            // empty string hatao
+      setNewsData(newsArray)
+      console.log(newsArray);
+    }
+    catch (err) {
+      console.log("something went wrong...");
+    }
+  }
+
+  useEffect(() => {
+    getNews();
+  }, []);
+
+  console.log("news: ", newsData);
+
+  // let a1 = "U.S. military operation captures Venezuelan President Nicolás Maduro.Yemen faces worsening humanitarian crisis amid funding cuts.Iran protests escalate; UN warns against bloodshed.Central African Republic's President Touadéra reelected amid tensions.China bans dual-use exports to Japan amid rising military tensions.6.2 magnitude earthquake strikes western Japan; no tsunami warning.Gaza meets basic food needs for first time since 2023.Escalating violence in Sudan raises civilian safety concerns.U.N. Security Council divided over U.S. actions in Venezuela.Flash floods in Indonesia leave 14 dead, several missing."
+
+
 
   return (
     <div className="h-full overflow-hidden rounded-lg">
       <Slider {...settings} className="h-full bg-gray-100">
-
-        {/* 1 */}
-        <div className="h-full flex items-center justify-center rounded-lg p-1">
-          <h3 className="text-center font-bold text-gray-500 py-0.5">News 1</h3>
-          <div className="flex-1 overflow-hidden text-xs lg:text-xl">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita repellat eius laborum ullam ducimus Lorem ipsum
-          </div>
-        </div>
-
-        {/* 2 */}
-        <div className="h-full flex items-center justify-center rounded-lg p-1">
-          <h3 className="text-center font-bold text-gray-500 py-0.5">News 2</h3>
-          <div className="flex-1 overflow-hidden text-xs lg:text-xl">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita repellat eius laborum ullam ducimus Lorem ipsum
-          </div>
-        </div>
-
-        {/* 3 */}
-        <div className="h-full flex items-center justify-center rounded-lg p-1">
-          <h3 className="text-center font-bold text-gray-500 py-0.5">News 3</h3>
-          <div className="flex-1 overflow-hidden text-xs lg:text-xl">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita repellat eius laborum ullam ducimus Lorem ipsum
-          </div>
-        </div>
-
-
-        {/* 4 */}
-        <div className="h-full flex items-center justify-center rounded-lg p-1">
-          <h3 className="text-center font-bold text-gray-500 py-0.5">News 4</h3>
-          <div className="flex-1 overflow-hidden text-xs lg:text-xl">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita repellat eius laborum ullam ducimus Lorem ipsum
-          </div>
-        </div>
-
-        {/* 5 */}
-        <div className="h-full flex items-center justify-center rounded-lg p-1">
-          <h3 className="text-center font-bold text-gray-500 py-0.5">News 5</h3>
-          <div className="flex-1 overflow-hidden text-xs lg:text-xl">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita repellat eius laborum ullam ducimus Lorem ipsum
-          </div>
-        </div>
-
-        {/* 6 */}
-        <div className="h-full flex items-center justify-center rounded-lg p-1">
-          <h3 className="text-center font-bold text-gray-500 py-0.5">News 6</h3>
-          <div className="flex-1 overflow-hidden text-xs lg:text-xl">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita repellat eius laborum ullam ducimus Lorem ipsum
-          </div>
-        </div>
-
-        {/* 7 */}
-        <div className="h-full flex items-center justify-center rounded-lg p-1">
-          <h3 className="text-center font-bold text-gray-500 py-0.5">News 7</h3>
-          <div className="flex-1 overflow-hidden text-xs lg:text-xl">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita repellat eius laborum ullam ducimus Lorem ipsum
-          </div>
-        </div>
-
-        {/* 8 */}
-        <div className="h-full flex items-center justify-center rounded-lg p-1">
-          <h3 className="text-center font-bold text-gray-500 py-0.5">News 8</h3>
-          <div className="flex-1 overflow-hidden text-xs lg:text-xl">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita repellat eius laborum ullam ducimus Lorem ipsum
-          </div>
-        </div>
-
-        {/* 9 */}
-        <div className="h-full flex items-center justify-center rounded-lg p-1">
-          <h3 className="text-center font-bold text-gray-500 py-0.5">News 9</h3>
-          <div className="flex-1 overflow-hidden text-xs lg:text-xl">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita repellat eius laborum ullam ducimus Lorem ipsum
-          </div>
-        </div>
-
-        {/* 10 */}
-        <div className="h-full flex items-center justify-center rounded-lg p-1">
-          <h3 className="text-center font-bold text-gray-500 py-0.5">News 10</h3>
-          <div className="flex-1 overflow-hidden text-xs lg:text-xl">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita repellat eius laborum ullam ducimus Lorem ipsum
-          </div>
-        </div>
+        {newsData?.map((v, i) => {
+          return (
+            <div className="h-full flex items-center justify-center rounded-lg p-1">
+              <h3 className="text-center font-bold text-gray-500 py-0.5">News {i+1}</h3>
+              <div className="flex-1 overflow-hidden text-xs lg:text-xl">
+               {v}
+              </div>
+            </div>
+          )
+        })}
       </Slider>
     </div>
   );
