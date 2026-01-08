@@ -1,7 +1,10 @@
+"use client"
 import Image from "next/image";
 
-
 const Total = () => {
+
+ 
+
   return (
     <div className="grid grid-cols-3 gap-3 p-3">
       <CardData title1="Bounce rate" title2="Last month" value1={'45%'} value2={'50%'} icon="/frame-1.svg"/>

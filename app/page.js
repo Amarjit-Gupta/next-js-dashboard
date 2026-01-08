@@ -114,7 +114,8 @@
 
 // export default App;
 
-
+"use client"
+import { useEffect, useState } from "react";
 import BarChartDouble from "./BarchartDouble/page";
 import BarChartSingle from "./BarchartSingle/page";
 import CarouselComponent from "./Crousel/page";
@@ -125,6 +126,24 @@ import TodaysCreative from "./TodaysCreative/page";
 import Total from "./Total/page";
 
 const App = () => {
+
+   const [quotes,setQuotes] = useState(null);
+
+  const getQuotes = async () => {
+    let result = await fetch("https://marketing-dashboard.integerstech.com/analyze/quote/today");
+    let data = await result.json();
+    console.log(data?.quote);
+    setQuotes(data?.quote);
+  }
+
+
+  useEffect(()=>{
+    getQuotes();
+  },[]);
+
+  // console.log("quotes: ",quote);
+
+
   return (
     // <div className="h-screen bg-gray-100 p-1 lg:p-3 grid grid-rows-[0.2fr_1fr_0.5fr_1.2fr] gap-4">
     <div className="h-screen bg-gray-100 p-1 lg:p-3 grid grid-rows-[0.2fr_0.7fr_0.3fr_1.2fr] gap-1 overflow-hidden">
@@ -139,7 +158,8 @@ const App = () => {
         <div className="h-full"><BarChartDouble /></div>
         <div className="h-full"><BarChartSingle /></div>
         <div className="h-full border bg-white rounded-xl border-gray-200">
-          <div className="h-[34%] border p-2 text-xl font-bold gradient-text">Great marketing happens when creativity meets consistency.
+          <div className="h-[34%] border p-2 text-xl font-bold gradient-text">
+            {quotes}
           </div>
           <div className="h-[66%] border"><Total/></div>
           
