@@ -1,7 +1,7 @@
 // const KPI = ({ txt1, txt2, val1, val2 }) => {
 //   const showSecond = txt2 && val2 != null;
 
-import { useEffect, useState } from "react";
+
 
 //   return (
 //     <div className="h-full">
@@ -38,8 +38,8 @@ import { useEffect, useState } from "react";
 
 
 
-
-
+"use client"
+import { useEffect, useState } from "react";
 
 const KPI = () => {
 
