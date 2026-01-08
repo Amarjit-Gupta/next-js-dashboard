@@ -52,6 +52,8 @@
 
 import Image from 'next/image';
 
+let SIGNED_URL = "https://dashboard-asset-library.s3.amazonaws.com/assets/cf118093-9035-46f3-aa4d-2da8de215558_pharma.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA5RA6WRQ325X2CWDH%2F20260108%2Feu-north-1%2Fs3%2Faws4_request&X-Amz-Date=20260108T060559Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=fb4737570aa9f47783c2d80086ad9de9efa30c48545764ffad7289aedf47b1b0";
+
 const TodaysCreative = () => {
   return (
     <div className="h-full flex flex-col overflow-hidden">
@@ -74,16 +76,17 @@ const TodaysCreative = () => {
             priority
           />
         </div> */}
-        <div className="relative overflow-hidden rounded-lg border border-gray-200 w-full">
-          <Image
-            src="/about.png"
-            alt="Example image"
-            fill
-            className="object-cover"
-            priority
-            sizes="50vw"
+        <div className="w-full overflow-hidden rounded-lg border border-gray-200">
+          <img
+            src="/a3.jpg"
+            alt="image"
+            className="w-full h-full object-cover"
           />
         </div>
+
+
+        {/* <img src="https://dashboard-asset-library.s3.amazonaws.com/assets/cf118093-9035-46f3-aa4d-2da8de215558_pharma.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA5RA6WRQ325X2CWDH%2F20260108%2Feu-north-1%2Fs3%2Faws4_request&X-Amz-Date=20260108T060559Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=fb4737570aa9f47783c2d80086ad9de9efa30c48545764ffad7289aedf47b1b0" className='object-cover' alt="" /> */}
+
 
         {/* Image 2 */}
         <div className="relative overflow-hidden rounded-lg border border-gray-200 w-full">

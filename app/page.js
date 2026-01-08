@@ -127,7 +127,7 @@ import Total from "./Total/page";
 const App = () => {
   return (
     // <div className="h-screen bg-gray-100 p-1 lg:p-3 grid grid-rows-[0.2fr_1fr_0.5fr_1.2fr] gap-4">
-    <div className="h-screen bg-gray-100 p-1 lg:p-3 grid grid-rows-[0.2fr_0.7fr_0.3fr_1.2fr] gap-1">
+    <div className="h-screen bg-gray-100 p-1 lg:p-3 grid grid-rows-[0.2fr_0.7fr_0.3fr_1.2fr] gap-1 overflow-hidden">
     {/* // <div className="bg-gray-100 p-3 m-auto flex flex-col gap-2"> */}
       {/* HEADER */}
       <div className=" bg-white rounded-xl flex items-center border border-gray-200">
@@ -139,9 +139,9 @@ const App = () => {
         <div className="h-full"><BarChartDouble /></div>
         <div className="h-full"><BarChartSingle /></div>
         <div className="h-full border bg-white rounded-xl border-gray-200">
-          <div className="h-[34%] border p-2 text-xl font-bold">Great marketing happens when creativity meets consistency.
+          <div className="h-[34%] border p-2 text-xl font-bold gradient-text">Great marketing happens when creativity meets consistency.
           </div>
-          <div className=" "><Total/></div>
+          <div className="h-[66%] border"><Total/></div>
           
           </div>
       </div>
@@ -151,27 +151,27 @@ const App = () => {
         <KPI txt1="Total Leads" txt2="Last month" val1={20} val2={20} />
         <KPI txt1="Best Company" val1="xyz" />
         <KPI txt1="Best Product" val1="xyz" />
-        <KPI txt1="Revenue" val1={20} />
+        <KPI txt1="Revenue Generated" val1={20} />
 
         <div className="h-full p-1 lg:p-3 flex justify-between bg-white rounded-xl border border-gray-200">
           <div className=" flex flex-col justify-around bg-gray-100 rounded-lg px-1">
-            <div className=" p-1 rounded-full h-4 w-4 lg:h-9 lg:w-9 bg-[#ff6caf]"></div>
+            <div className=" p-1 rounded-full h-4 w-4 lg:h-8 lg:w-8 bg-[#ff6caf]"></div>
             <div className="text-[10px] lg:text-xl font-medium">999</div>
           </div>
           <div className=" flex flex-col justify-around bg-gray-100 rounded-lg px-1">
-            <div className=" p-1 rounded-full h-4 w-4 lg:h-9 lg:w-9 bg-[#04c56b]"></div>
+            <div className=" p-1 rounded-full h-4 w-4 lg:h-8 lg:w-8 bg-[#04c56b]"></div>
             <div className=" text-[10px] lg:text-xl  font-medium">999</div>
           </div>
           <div className=" flex flex-col justify-around bg-gray-100 rounded-lg px-1">
-            <div className=" p-1 rounded-full h-4 w-4 lg:h-9 lg:w-9 bg-[#00b6cc]"></div>
+            <div className=" p-1 rounded-full h-4 w-4 lg:h-8 lg:w-8 bg-[#00b6cc]"></div>
             <div className=" text-[10px] lg:text-xl  font-medium">999</div>
           </div>
           <div className=" flex flex-col justify-around bg-gray-100 rounded-lg px-1">
-            <div className=" p-1 rounded-full h-4 w-4 lg:h-9 lg:w-9 bg-[#4b7bf5]"></div>
+            <div className=" p-1 rounded-full h-4 w-4 lg:h-8 lg:w-8 bg-[#4b7bf5]"></div>
             <div className=" text-[10px] lg:text-xl  font-medium">999</div>
           </div>
           <div className=" flex flex-col justify-around bg-gray-100 rounded-lg px-1">
-            <div className=" p-1 rounded-full h-4 w-4 lg:h-9 lg:w-9 bg-[#ffcc00]"></div>
+            <div className=" p-1 rounded-full h-4 w-4 lg:h-8 lg:w-8 bg-[#ffcc00]"></div>
             <div className=" text-[10px] lg:text-xl  font-medium">999</div>
           </div>
         </div>
@@ -187,7 +187,7 @@ const App = () => {
 
         {/* Heading News + Carousel + Hashtags */}
         <div className=" p-3 flex flex-col h-full overflow-hidden bg-white rounded-xl  border border-gray-200">
-          <h2 className="font-medium text-xs lg:text-lg mb-2">Heading News</h2>
+          <h2 className="font-medium text-xs lg:text-lg mb-2">Todays Trending</h2>
 
           <div className="flex-1 flex gap-3 overflow-hidden">
             {/* Carousel */}
@@ -197,14 +197,15 @@ const App = () => {
 
             {/* Trending Hashtags */}
             <div className="flex-1 p-1 bg-gray-100 rounded-lg">
-              <h3 className="font-semibold text-gray-500 py-0.5 text-center">Trending Hashtag</h3>
+              <h3 className="font-semibold text-gray-500 py-0.5 text-center">Hashtags</h3>
               <ul className="list-disc pl-5 text-xs lg:text-xl">
+                <li>Lorem ipsum dolor</li>
+                <li>Lorem ipsum dolor</li>
                 <li>
                   Lorem ipsum dolor
                 </li>
                 <li>Lorem ipsum dolor</li>
                 <li>Lorem ipsum dolor</li>
-                
               </ul>
             </div>
           </div>

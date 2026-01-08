@@ -67,6 +67,7 @@ import {
   ResponsiveContainer,
   LabelList,
   Legend,
+  Label,
 } from "recharts";
 
 const BarChartSingle = () => {
@@ -80,12 +81,12 @@ const BarChartSingle = () => {
 
   return (
     <div className="bg-white p-3 rounded-xl border w-full min-w-0 flex flex-col border-gray-200">
-      <h2 className="text-xs lg:text-lg font-semibold mb-3">
-        Social impressions
+      <h2 className=" font-semibold mb-3">
+        <span className="text-gray-500 text-[10px] lg:text-lg">Social Impressions </span><span className=" text-xs lg:text-lg">552626</span>
       </h2>
 
       <div className="w-full min-w-0 h-45 overflow-hidden">
-        <ResponsiveContainer width="100%" height={170} className="border border-gray-200 h-full">
+        <ResponsiveContainer width="100%" height={180} className="border border-gray-200 h-full">
           <BarChart data={data}>
             {/* <CartesianGrid strokeDasharray="3 3" /> */}
             
@@ -95,8 +96,23 @@ const BarChartSingle = () => {
               tick={{ fontSize: 12,fill: "black"  }}
             />
 
-            <YAxis interval={0}
-              tick={{ fontSize: 12,fill: "black"  }}/>
+            {/* <YAxis interval={0}
+              tick={{ fontSize: 12,fill: "black"  }}/> */}
+              <YAxis
+                            interval={0}
+                            tick={{ fontSize: 10, fill: "black" }}
+                          >
+                            <Label
+                              value="Impressions"
+                              angle={-90}
+                              position="insideLeft"
+                              offset={15}
+                              style={{
+                                textAnchor: "middle",
+                                fontSize: 16
+                              }}
+                            />
+                          </YAxis>
             <Tooltip />
             <Legend content={<CustomLegend />} />
 

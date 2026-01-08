@@ -133,7 +133,8 @@ import {
   CartesianGrid,
   ResponsiveContainer,
   LabelList,
-  Legend
+  Legend,
+  Label
 } from "recharts";
 
 const BarChartDouble = () => {
@@ -142,17 +143,17 @@ const BarChartDouble = () => {
     { title: "Nutra", ctr: 20, cvr: 28 },
     { title: "Pharma", ctr: 22, cvr: 25 },
     { title: "Engg.", ctr: 25, cvr: 32.8 },
-     { title: "Encap", ctr: 18, cvr: 26 },
+    { title: "Encap", ctr: 18, cvr: 26 },
   ];
 
   return (
     <div className="bg-white p-3 rounded-xl border w-full min-w-0 flex flex-col border-gray-200">
-      <h2 className="text-xs lg:text-lg font-semibold mb-3">
-        visitors web total : 56845
+     <h2 className=" font-semibold mb-3">
+        <span className="text-gray-500 text-[10px] lg:text-lg">Web Impressions </span><span className=" text-xs lg:text-lg">552626</span>
       </h2>
 
       <div className="w-full min-w-0 h-45 overflow-hidden">
-        <ResponsiveContainer width="100%" height={170} className="border border-gray-200 h-full">
+        <ResponsiveContainer width="100%" height={180} className="border border-gray-200 h-full">
           <BarChart data={data} barCategoryGap="20%">
             {/* <CartesianGrid strokeDasharray="3 3" /> */}
 
@@ -165,8 +166,26 @@ const BarChartDouble = () => {
             // textAnchor="end"    // rotation ke saath alignment fix
             />
 
-            <YAxis interval={0}
-              tick={{ fontSize: 10,fill: "black"  }} />
+            {/* <YAxis interval={0}
+              tick={{ fontSize: 10,fill: "black"  }}
+              tickFormatter={(value)=>`count\u00A0${ value}`}
+              /> */}
+
+            <YAxis
+              interval={0}
+              tick={{ fontSize: 10, fill: "black" }}
+            >
+              <Label
+                value="Impressions"
+                angle={-90}
+                position="insideLeft"
+                offset={15}
+                style={{
+                  textAnchor: "middle",
+                  fontSize: 16
+                }}
+              />
+            </YAxis>
 
             <Tooltip />
 
