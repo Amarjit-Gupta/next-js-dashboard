@@ -73,7 +73,7 @@ const PaidAds = () => {
             <div className="flex-1 grid grid-cols-2 gap-2">
                 <div className=" flex flex-col justify-center px-1 dark-card rounded-lg">
                     <p className="text-gray-300 text-[8px] lg:text-sm wrap-break-word">Keyword</p>
-                    <p className="text-[8px] lg:text-lg">{keyword ?? "--"}</p>
+                    <p className="text-[6px] lg:text-lg">{keyword ?? "--"}</p>
                 </div>
                 <div className=" flex flex-col justify-center px-1 dark-card rounded-lg">
                     <p className="text-gray-300 text-[8px] lg:text-sm wrap-break-word">Campaign</p>
@@ -85,7 +85,7 @@ const PaidAds = () => {
                 </div>
                 <div className=" flex flex-col justify-center px-1 dark-card rounded-lg">
                     <p className="text-gray-300 text-[7px] lg:text-sm wrap-break-word">Competitor</p>
-                    <p className="text-[8px] lg:text-lg">{competitor ?? "--"}</p>
+                    <p className="text-[6px] lg:text-lg">{competitor ?? "--"}</p>
                 </div>
             </div>
         </div>
