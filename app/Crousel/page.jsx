@@ -43,7 +43,7 @@ const [newsData, setNewsData] = useState([]);
       <Slider {...settings} className="h-full dark-card">
         {newsData?.map((txt, i) => {
           return (
-            <div className="h-full flex items-center justify-center rounded-lg p-1">
+            <div className="h-full flex items-center justify-center rounded-lg p-2">
               <h3 className="text-center font-bold text-gray-300 py-0.5">News {i+1}</h3>
               <div className="flex-1 overflow-hidden text-xs lg:text-xl">
                {txt}
