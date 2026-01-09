@@ -327,6 +327,8 @@ const BarChartDouble = () => {
     getWebData();
   }, []);
 
+  console.log("web data ---",webData);
+
   return (
     <div className="bg-white p-3 rounded-xl border w-full min-w-0 flex flex-col border-gray-200">
       <h2 className="font-semibold mb-3">
@@ -373,6 +375,7 @@ const BarChartDouble = () => {
             <LabelList
               dataKey="lastMonth"
               position="top"
+              angle={-90}
               fontSize={10}
               fill="black"
               formatter={formatNumber}
