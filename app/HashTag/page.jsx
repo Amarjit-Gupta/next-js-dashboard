@@ -11,7 +11,7 @@ const HashTag = () => {
                 <li>Lorem ipsum dolor</li>
                 <li>Lorem ipsum dolor</li>
             </ul> */}
-            <div className="border text-xs lg:text-xl pl-3 text-blue-500">
+            <div className="text-xs lg:text-xl pl-3 text-blue-500">
                 <p>#EncapsulatedActive</p>
                 <p>#EntericCoated</p>
                 <p>#SustainedRelease</p>
