@@ -37,7 +37,7 @@ const App = () => {
           <Quotes />
 
           {/* total */}
-          <div className="h-[66%] border">
+          <div className="h-[66%]">
             <BounceRate />
           </div>
         </div>
