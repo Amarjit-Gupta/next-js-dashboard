@@ -101,7 +101,7 @@ const TodaysCreative = () => {
           <img
             src={imgURL[0]?.url}
             alt="image"
-            className="w-full h-full object-cover"
+            className="w-full h-full"
           />
         </div>
 
@@ -125,7 +125,7 @@ const TodaysCreative = () => {
           <img
             src={imgURL[1]?.url}
             alt="image"
-            className="w-full h-full object-cover"
+            className="w-full h-full"
           />
         </div>
 
