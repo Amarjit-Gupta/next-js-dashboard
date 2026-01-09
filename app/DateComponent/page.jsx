@@ -178,10 +178,10 @@ const DateTime = () => {
 
   return (
     <div className=" flex justify-between w-full px-3">
-      <div className=" font-bold text-xl">
+      <div className=" font-bold text-sm">
         Current Month Performance
       </div>
-      <div className="flex font-bold text-xl gap-6 ">
+      <div className="flex font-bold text-sm gap-6 ">
         <span>Date: {date}</span>
         <span>Time: {time}</span>
       </div>
