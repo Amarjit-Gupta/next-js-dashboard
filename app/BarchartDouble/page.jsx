@@ -154,24 +154,28 @@ const BarChartDouble = () => {
 
 
 
-  const [socialData, setSocialData] = useState([]);
+  const [webData, setWebData] = useState([]);
 
-  const getSocialData = async () => {
+  const [activeUser,setActiveUser] = useState(null);
+
+  const getWebData = async () => {
     try {
-      const result = await fetch("https://marketing-dashboard.integerstech.com/analyze/active-users/umang-websites");
+      const result = await fetch("https://marketing-dashboard.integerstech.com/analyze/active-users/umang-websites/monthly-comparison");
       const data = await result.json();
 
       console.log("data: ", data?.websites);
       if (Array.isArray(data?.websites)) {
         const chartData = data?.websites?.filter((item) => item.id !== "08458e02-892f-40e9-897b-21e750a5d499").map((itm) => ({
           title: nameShortMap[itm.name] || itm.name, // short name
-          lastMonth: itm.active_users_yesterday,
-          currentMonth: itm.active_users_today
+          lastMonth: itm.active_users_previous_month,
+          currentMonth: itm.active_users_current_month
         }));
 
         // console.log("charrtData: ",chartData);
-        setSocialData(chartData || []);
+        setWebData(chartData || []);
       }
+
+      setActiveUser(data?.total_active_users_current_month ?? null);
     }
     catch (err) {
       console.log("something went wrong...");
@@ -180,23 +184,23 @@ const BarChartDouble = () => {
 
 
   useEffect(() => {
-    getSocialData();
+    getWebData();
   }, []);
 
 
-  console.log("social: ", socialData);
+  console.log("web: ", webData);
 
 
   return (
     <div className="bg-white p-3 rounded-xl border w-full min-w-0 flex flex-col border-gray-200">
       <h2 className=" font-semibold mb-3">
         <span className="text-gray-500 text-[10px] lg:text-lg">Active Users</span> &nbsp;&nbsp;
-        <span className=" text-xs lg:text-lg">552626</span>
+        <span className=" text-xs lg:text-lg">{activeUser ?? "--"}</span>
       </h2>
 
       <div className="w-full min-w-0 h-45 overflow-hidden">
-        <ResponsiveContainer width="100%" height={180}>
-          <BarChart data={socialData} barCategoryGap="20%">
+        <ResponsiveContainer width="100%" height={180} className="border border-gray-200 h-full">
+          <BarChart data={webData} barCategoryGap="20%">
             {/* X Axis */}
             <XAxis
               dataKey="title"
@@ -211,7 +215,7 @@ const BarChartDouble = () => {
                 fill="black"
                 angle={-90}
                 position="insideLeft"
-                offset={15}
+                offset={5}
                 style={{ textAnchor: "middle", fontSize: 14 }}
               />
             </YAxis>

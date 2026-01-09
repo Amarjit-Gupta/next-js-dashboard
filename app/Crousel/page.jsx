@@ -61,7 +61,7 @@ function CarouselComponent() {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 20000,
+    autoplaySpeed: 5000,
     pauseOnHover: true,
   };
 
@@ -76,10 +76,10 @@ function CarouselComponent() {
       let data = await result.json();
       //  console.log("iamges--1: ",data);
       const newsArray = data
-        .split("\n")                 // newline se split
-        .map(item => item.trim())    // extra spaces hatao
-        .filter(Boolean);            // empty string hatao
-      setNewsData(newsArray)
+        .split("\n")                 
+        .map(item => item.trim())    // extra white spaces
+        .filter(Boolean);            // remove empty string
+      setNewsData(newsArray);
       console.log(newsArray);
     }
     catch (err) {

@@ -1,28 +1,129 @@
+"use client"
+
+import { useEffect, useState } from "react";
+
 const PaidAds = () => {
-    return(
+
+
+    const [keyword, setKeyword] = useState(null);
+    const [campaign, setCampaign] = useState(null);
+
+    const [adSpent, setAdSpent] = useState(null);
+    const [competitor, setCompetitor] = useState(null);
+
+
+
+    const getKPIData = async () => {
+        try {
+            let [keywordRes, campaignRes, adSpentRes, competitorRes] = await Promise.allSettled([
+                fetch("https://marketing-dashboard.integerstech.com/analyze/keyword/today"),
+                fetch("https://marketing-dashboard.integerstech.com/analyze/campaign/today"),
+                fetch("https://marketing-dashboard.integerstech.com/analyze/ad-spend/current-month"),
+                fetch("https://marketing-dashboard.integerstech.com/analyze/competitor/today")
+            ]);
+
+            // console.log("keywordRes", keywordRes);
+            // console.log("campaignRes", campaignRes);
+            // console.log("adSpentRes", adSpentRes);
+            // console.log("competitorRes", competitorRes);
+
+
+            // 1
+            if (keywordRes.status === "fulfilled") {
+                const keywordData = await keywordRes.value.json();
+                console.log("keywordData", keywordData);
+                setKeyword(keywordData ?? null);
+            }
+            else {
+                console.log("bounceRate api failed...");
+            }
+
+            // 2
+            if (campaignRes.status === "fulfilled") {
+                const campaignData = await campaignRes.value.json();
+                console.log("campaignData", campaignData);
+                setCampaign(campaignData ?? null);
+            }
+            else {
+                console.log("bounceRate api failed...");
+            }
+
+            // 3
+            if (adSpentRes.status === "fulfilled") {
+                const adSpentData = await adSpentRes.value.json();
+                console.log("adSpentData", adSpentData);
+                setAdSpent(adSpentData?.total_ad_spend_rupees ?? null);
+            }
+            else {
+                console.log("bounceRate api failed...");
+            }
+
+            // 4
+            if (competitorRes.status === "fulfilled") {
+                const competitorData = await competitorRes.value.json();
+                console.log("competitorData", competitorData);
+                setCompetitor(competitorData ?? null);
+            }
+            else {
+                console.log("bounceRate api failed...");
+            }
+
+            // // 5
+            // if (revenueRes.status === "fulfilled") {
+            //     const revenueData = await revenueRes.value.json();
+            //     // console.log("revenueData", revenueData);
+            //     setRevenue(revenueData?.product_of_interest ?? null);
+            // }
+            // else {
+            //     console.log("bounceRate api failed...");
+            // }
+
+            // // 6
+            // if (companyRes.status === "fulfilled") {
+            //     const companyData = await companyRes.value.json();
+            //     // console.log("companyData", companyData);
+            //     setCompany(companyData?.industries);
+            // }
+            // else {
+            //     console.log("bounceRate api failed...");
+            // }
+
+        }
+        catch (err) {
+            console.log("something went wrong...");
+        }
+    }
+
+    useEffect(() => {
+        getKPIData();
+    }, []);
+
+
+
+    return (
         <div className="flex flex-col h-full">
 
-                <h1 className="font-medium text-xs lg:text-lg mb-2">Paid Ads</h1>
+            <h1 className="font-medium text-xs lg:text-lg mb-2">Paid Ads</h1>
 
-                <div className="flex-1 grid grid-cols-2 gap-2">
-                    <div className=" flex flex-col justify-center px-1 bg-gray-100 rounded-lg">
-                        <p className="text-gray-500 text-[8px] lg:text-sm wrap-break-word">Keyword</p>
-                        <p className="text-xs lg:text-xl">65455</p>
-                    </div>
-                    <div className=" flex flex-col justify-center px-1 bg-gray-100 rounded-lg">
-                        <p className="text-gray-500 text-[8px] lg:text-sm wrap-break-word">Campaign</p>
-                        <p className="text-xs lg:text-xl">65455</p>
-                    </div>
-                    <div className=" flex flex-col justify-center px-1 bg-gray-100 rounded-lg">
-                        <p className="text-gray-500 text-[8px] lg:text-sm">Ad Spent</p>
-                        <p className="text-xs lg:text-xl">65455</p>
-                    </div>
-                    <div className=" flex flex-col justify-center px-1 bg-gray-100 rounded-lg">
-                        <p className="text-gray-500 text-[7px] lg:text-sm wrap-break-word">Competitor</p>
-                        <p className="text-xs lg:text-xl">65455</p>
-                    </div>
+            <div className="flex-1 grid grid-cols-2 gap-2">
+                <div className=" flex flex-col justify-center px-1 bg-gray-100 rounded-lg">
+                    <p className="text-gray-500 text-[8px] lg:text-sm wrap-break-word">Keyword</p>
+                    <p className="text-xs lg:text-xl">{keyword ?? "--"}</p>
+                </div>
+                <div className=" flex flex-col justify-center px-1 bg-gray-100 rounded-lg">
+                    <p className="text-gray-500 text-[8px] lg:text-sm wrap-break-word">Campaign</p>
+                    <p className="text-xs lg:text-xl">{campaign ?? "--"}</p>
+                </div>
+                <div className=" flex flex-col justify-center px-1 bg-gray-100 rounded-lg">
+                    <p className="text-gray-500 text-[8px] lg:text-sm">Ad Spent</p>
+                    <p className="text-xs lg:text-xl">{adSpent ?? "--"}</p>
+                </div>
+                <div className=" flex flex-col justify-center px-1 bg-gray-100 rounded-lg">
+                    <p className="text-gray-500 text-[7px] lg:text-sm wrap-break-word">Competitor</p>
+                    <p className="text-xs lg:text-xl">{competitor ?? "--"}</p>
                 </div>
             </div>
+        </div>
     );
 };
 export default PaidAds;

@@ -1,4 +1,4 @@
-// https://marketing-dashboard.integerstech.com/analyze/active-users/umang-websites   // barchart 1 data
+// https://marketing-dashboard.integerstech.com/analyze/active-users/umang-websites/monthly-comparison   // barchart 1 data
 // https://marketing-dashboard.integerstech.com/analyze/social/impressions/current-month  // barchart 2 data
 
 // https://marketing-dashboard.integerstech.com/analyze/quote/today // Great marketing happens when creativity meets consistency.  (data)
@@ -31,3 +31,14 @@
 
 
 // text: Great marketing happens when creativity meets consistency.
+
+
+
+// https://marketing-dashboard.integerstech.com/analyze/emailer/performance/current-month  // Emailer
+
+// https://marketing-dashboard.integerstech.com/analyze/keyword/today  // keyword
+// https://marketing-dashboard.integerstech.com/analyze/campaign/today // Campaign  
+
+// https://marketing-dashboard.integerstech.com/analyze/ad-spend/current-month // Ad Spent
+
+// https://marketing-dashboard.integerstech.com/analyze/competitor/today  // Competitor
