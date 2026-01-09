@@ -57,7 +57,7 @@ const App = () => {
         {/* Heading News */}
         <div className=" p-3 flex flex-col h-full overflow-hidden dark rounded-xl">
 
-          <h2 className="font-medium text-xs lg:text-lg mb-2">Todays Trending</h2>
+          <h2 className="font-medium text-xs lg:text-lg mb-2">Today’s Trending</h2>
           <div className="flex-1 flex gap-3 overflow-hidden">
 
             {/* Carousel */}

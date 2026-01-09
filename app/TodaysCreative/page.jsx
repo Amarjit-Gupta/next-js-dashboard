@@ -26,7 +26,7 @@ const TodaysCreative = () => {
   return (
     <div className="h-full flex flex-col overflow-hidden">
       <h2 className="font-medium text-xs lg:text-lg mb-2">
-        Todays Creative
+        Today’s Creative
       </h2>
       <div className="flex-1 grid grid-cols-2 gap-3 overflow-hidden">
         <div className="w-full overflow-hidden rounded-lg">
