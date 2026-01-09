@@ -14,7 +14,7 @@ import PaidAds from "./PaidAds/page";
 const App = () => {
 
   return (
-    <div className="h-screen bg-[#021c1b] p-1 lg:p-3 grid grid-rows-[0.2fr_0.7fr_0.3fr_1.2fr] gap-1 overflow-hidden">
+    <div className="h-screen bg-[#021c1b] p-1 lg:p-3 grid grid-rows-[0.2fr_0.7fr_0.3fr_1.2fr] gap-1 lg:gap-2 overflow-hidden">
 
 
       {/* current date and time */}
