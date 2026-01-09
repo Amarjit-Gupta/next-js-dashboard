@@ -234,12 +234,13 @@ const BarChartSingle = () => {
             >
               <Label
                 value="Impressions"
+                fill="black"
                 angle={-90}
                 position="insideLeft"
                 offset={5}
                 style={{
                   textAnchor: "middle",
-                  fontSize: 16
+                  fontSize: 14
                 }}
               />
             </YAxis>
