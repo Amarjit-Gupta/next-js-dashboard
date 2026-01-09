@@ -177,9 +177,14 @@ const DateTime = () => {
   if (error) return <p className="w-full text-right px-3">{error}</p>;
 
   return (
-    <div className="flex justify-end w-full font-bold text-xl px-3 gap-6">
-      <span>Date: {date}</span>
-      <span>Time: {time}</span>
+    <div className=" flex justify-between w-full px-3">
+      <div className=" font-bold text-xl">
+        Current Month Performance
+      </div>
+      <div className="flex font-bold text-xl gap-6 ">
+        <span>Date: {date}</span>
+        <span>Time: {time}</span>
+      </div>
     </div>
   );
 };
