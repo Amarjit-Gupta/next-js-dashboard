@@ -46,8 +46,6 @@ const App = () => {
       {/* KPI */}
       <KPI />
 
-
-
       {/* Bottom Section */}
       <div className="grid grid-cols-3 gap-4 flex-1 overflow-hidden">
 
@@ -82,7 +80,6 @@ const App = () => {
         </div>
 
       </div>
-
 
     </div>
   );

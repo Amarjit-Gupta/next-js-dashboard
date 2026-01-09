@@ -1,10 +1,9 @@
 "use client"
 import { useEffect, useState } from "react";
 
-
 const Emailer = () => {
 
-    const [emailerData,setEmailerData] = useState(null);
+    const [emailerData, setEmailerData] = useState(null);
 
     const getEmailerData = async () => {
         try {
@@ -22,16 +21,11 @@ const Emailer = () => {
         getEmailerData();
     }, []);
 
-    // console.log("Emailer data-----: ",emailerData);
-
     return (
-
         <div className="flex flex-col h-full">
-
             <h1 className="font-medium text-xs lg:text-lg mb-2">
                 Emailer
             </h1>
-
             <div className=" flex-1 grid grid-cols-2 gap-2">
                 <div className=" flex flex-col justify-center px-1 dark-card rounded-lg">
                     <p className="text-gray-300 text-[8px] lg:text-sm wrap-break-word">Total Send</p>
@@ -51,12 +45,7 @@ const Emailer = () => {
                 </div>
             </div>
         </div>
-
-
-
     );
 };
 
 export default Emailer;
-
-

@@ -6,13 +6,10 @@ const BounceRate = () => {
 
   const [bounceRate, setBounceRate] = useState(null);
   const [lbounceRate, setLbounceRate] = useState(null);
-
   const [engTime, setEngTime] = useState(null);
   const [lengTime, setLengTime] = useState(null);
-
   const [clicks, setClicks] = useState(null);
   const [lclicks, setLclicks] = useState(null);
-
 
   const getBECData = async () => {
     try {
@@ -25,17 +22,10 @@ const BounceRate = () => {
         fetch("https://marketing-dashboard.integerstech.com/analyze/clicks/previous-month"),
       ]);
 
-      // console.log("bounceRateRes", bounceRateRes);
-      // console.log("lbounceRateRes", lbounceRateRes);
-      // console.log("engTimeRes", engTimeRes);
-      // console.log("lengTimeRes", lengTimeRes);
-      // console.log("clicksRes", clicksRes);
-      // console.log("lclicksRes", lclicksRes);
-
       // 1
       if (bounceRateRes.status === "fulfilled") {
         const bounceRateData = await bounceRateRes.value.json();
-       // console.log("bounceRateData", bounceRateData);
+        // console.log("bounceRateData", bounceRateData);
         setBounceRate(bounceRateData?.avg_bounce_rate_pct ?? null);
       }
       else {
@@ -45,7 +35,7 @@ const BounceRate = () => {
       // 2
       if (lbounceRateRes.status === "fulfilled") {
         const lbounceRateData = await lbounceRateRes.value.json();
-       // console.log("lbounceRateData", lbounceRateData);
+        // console.log("lbounceRateData", lbounceRateData);
         setLbounceRate(lbounceRateData?.avg_bounce_rate_pct ?? null);
       }
       else {
@@ -55,7 +45,7 @@ const BounceRate = () => {
       // 3
       if (engTimeRes.status === "fulfilled") {
         const engTimeData = await engTimeRes.value.json();
-       // console.log("engTimeData", engTimeData);
+        // console.log("engTimeData", engTimeData);
         setEngTime(engTimeData?.avg_engagement_time_formatted ?? null);
       }
       else {
@@ -65,7 +55,7 @@ const BounceRate = () => {
       // 4
       if (lengTimeRes.status === "fulfilled") {
         const lengTimeData = await lengTimeRes.value.json();
-       // console.log("lengTimeData", lengTimeData);
+        // console.log("lengTimeData", lengTimeData);
         setLengTime(lengTimeData?.avg_engagement_time_formatted ?? null);
       }
       else {
@@ -75,7 +65,7 @@ const BounceRate = () => {
       // 5
       if (clicksRes.status === "fulfilled") {
         const clicksData = await clicksRes.value.json();
-       // console.log("clicksData", clicksData);
+        // console.log("clicksData", clicksData);
         setClicks(clicksData?.total_clicks ?? null);
       }
       else {
@@ -85,13 +75,12 @@ const BounceRate = () => {
       // 6
       if (lclicksRes.status === "fulfilled") {
         const lclicksData = await lclicksRes.value.json();
-       // console.log("lclicksData", lclicksData);
+        // console.log("lclicksData", lclicksData);
         setLclicks(lclicksData?.total_clicks ?? null);
       }
       else {
         console.log("lclicks api failed...");
       }
-
     }
     catch (err) {
       console.log("something went wrong...");
@@ -115,11 +104,9 @@ export default BounceRate;
 
 
 const CardData = ({ title1, title2, value1, value2, icon }) => {
-  // console.log(typeof(value1));
-  // console.log(typeof(value2));
+
   return (
     <div className="dark-card shadow-xs rounded-lg p-2 flex flex-col justify-around items-center">
-
       {/* Icon */}
       <div className="h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center relative">
         <Image
@@ -130,7 +117,6 @@ const CardData = ({ title1, title2, value1, value2, icon }) => {
           sizes="(max-width: 640px) 40px, 40px"
           priority
         />
-
       </div>
 
       {/* First metric */}

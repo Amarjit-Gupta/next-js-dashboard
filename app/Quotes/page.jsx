@@ -9,7 +9,7 @@ const Quotes = () => {
         try {
             let result = await fetch("https://marketing-dashboard.integerstech.com/analyze/quote/today");
             let data = await result.json();
-            console.log("quote: ",data?.quote);
+           // console.log("quote: ",data?.quote);
             setQuotes(data?.quote);
         }
         catch (err) {
