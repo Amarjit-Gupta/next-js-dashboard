@@ -190,7 +190,7 @@ const KPI = () => {
         <p>
           <span className="text-gray-500 font-medium text-xs lg:text-sm">Revenue Generated</span>&nbsp;
           <br />
-          <span className="font-bold text-xs lg:text-2xl">{revenue ?? "--"}</span>
+          <span className="font-bold text-xs lg:text-2xl">{revenue ?? "--"} (d)</span>
         </p>
       </div>
 
