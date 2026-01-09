@@ -374,6 +374,7 @@ const BarChartDouble = () => {
           <Bar dataKey="lastMonth" fill="#3b82f6" name="Last month">
             <LabelList
               dataKey="lastMonth"
+              dy={-8}
               position="top"
               angle={-90}
               fontSize={10}
@@ -386,6 +387,8 @@ const BarChartDouble = () => {
           <Bar dataKey="currentMonth" fill="#22c55e" name="Current month">
             <LabelList
               dataKey="currentMonth"
+              dy={-8}     
+              angle={-90}
               position="top"
               fontSize={10}
               fill="black"

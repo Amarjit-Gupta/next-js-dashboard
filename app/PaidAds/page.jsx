@@ -120,7 +120,7 @@ const PaidAds = () => {
                 </div>
                 <div className=" flex flex-col justify-center px-1 bg-gray-100 rounded-lg">
                     <p className="text-gray-500 text-[7px] lg:text-sm wrap-break-word">Competitor</p>
-                    <p className="text-xs lg:text-xl">{competitor ?? "--"}</p>
+                    <p className="text-[8px] lg:text-xl">{competitor ?? "--"}</p>
                 </div>
             </div>
         </div>
