@@ -32,21 +32,21 @@ const Emailer = () => {
                 Emailer
             </h1>
 
-            <div className=" border-red-500 flex-1 grid grid-cols-2 gap-2">
-                <div className=" flex flex-col justify-center px-1 bg-gray-100 rounded-lg">
-                    <p className="text-gray-500 text-[8px] lg:text-sm wrap-break-word">Total Send</p>
+            <div className=" flex-1 grid grid-cols-2 gap-2">
+                <div className=" flex flex-col justify-center px-1 dark-card rounded-lg">
+                    <p className="text-gray-300 text-[8px] lg:text-sm wrap-break-word">Total Send</p>
                     <p className="text-xs lg:text-xl">{emailerData?.total_sends ?? "--"}</p>
                 </div>
-                <div className=" flex flex-col justify-center px-1 bg-gray-100 rounded-lg">
-                    <p className="text-gray-500  text-[8px] lg:text-sm wrap-break-word">Click Rate</p>
+                <div className=" flex flex-col justify-center px-1 dark-card rounded-lg">
+                    <p className="text-gray-300 text-[8px] lg:text-sm wrap-break-word">Click Rate</p>
                     <p className="text-xs lg:text-xl">{emailerData?.avg_click_rate_pct ?? "--"}</p>
                 </div>
-                <div className=" flex flex-col justify-center px-1 bg-gray-100 rounded-lg">
-                    <p className="text-gray-500  text-[8px] lg:text-sm wrap-break-word">Open Rate</p>
+                <div className=" flex flex-col justify-center px-1 dark-card rounded-lg">
+                    <p className="text-gray-300 text-[8px] lg:text-sm wrap-break-word">Open Rate</p>
                     <p className="text-xs lg:text-xl">{emailerData?.avg_open_rate_pct ?? "--"}</p>
                 </div>
-                <div className=" flex flex-col justify-center px-1 bg-gray-100 rounded-lg">
-                    <p className="text-gray-500  text-[7px] lg:text-sm wrap-break-word">Subscribers</p>
+                <div className=" flex flex-col justify-center px-1 dark-card rounded-lg">
+                    <p className="text-gray-300 text-[7px] lg:text-sm wrap-break-word">Subscribers</p>
                     <p className="text-xs lg:text-xl">{emailerData?.total_subscribers ?? "--"}</p>
                 </div>
             </div>

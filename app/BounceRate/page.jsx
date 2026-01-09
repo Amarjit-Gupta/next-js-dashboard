@@ -103,7 +103,7 @@ const BounceRate = () => {
   }, []);
 
   return (
-    <div className="grid grid-cols-3 gap-3 p-3">
+    <div className="grid grid-cols-3 gap-3 px-3">
       <CardData title1="Bounce rate" title2="Last month" value1={bounceRate !== null ? `${bounceRate}%` : "--"} value2={lbounceRate !== null ? `${lbounceRate}%` : "--"} icon="/frame-1.svg" />
       <CardData title1="Eng. time" title2="Last month" value1={engTime ?? "--"} value2={lengTime ?? "--"} icon="/frame-2.svg" />
       <CardData title1="Clicks" title2="Last month" value1={clicks ?? "--"} value2={lclicks ?? "--"} icon="/frame-3.svg" />
@@ -118,7 +118,7 @@ const CardData = ({ title1, title2, value1, value2, icon }) => {
   // console.log(typeof(value1));
   // console.log(typeof(value2));
   return (
-    <div className="bg-gray-100 shadow-xs rounded-lg p-2 flex flex-col justify-around items-center">
+    <div className="dark-card shadow-xs rounded-lg p-2 flex flex-col justify-around items-center">
 
       {/* Icon */}
       <div className="h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center relative">
@@ -135,13 +135,13 @@ const CardData = ({ title1, title2, value1, value2, icon }) => {
 
       {/* First metric */}
       <div className="text-center">
-        <p className="text-gray-500 font-medium text-xs lg:text-sm">{title1}</p>
+        <p className="text-gray-300 font-medium text-xs lg:text-sm">{title1}</p>
         <p className="text-xs font-medium lg:font-bold lg:text-sm">{value1}</p>
       </div>
 
       {/* Second metric */}
       <div className="text-center">
-        <p className="text-gray-500 font-medium text-xs lg:text-sm">{title2}</p>
+        <p className="text-gray-300 font-medium text-xs lg:text-sm">{title2}</p>
         <p className="text-xs font-medium lg:font-bold lg:text-sm">{value2}</p>
       </div>
     </div>

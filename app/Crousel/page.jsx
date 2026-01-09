@@ -99,11 +99,11 @@ function CarouselComponent() {
 
   return (
     <div className="h-full overflow-hidden rounded-lg">
-      <Slider {...settings} className="h-full bg-gray-100">
+      <Slider {...settings} className="h-full dark-card">
         {newsData?.map((v, i) => {
           return (
             <div className="h-full flex items-center justify-center rounded-lg p-1">
-              <h3 className="text-center font-bold text-gray-500 py-0.5">News {i+1}</h3>
+              <h3 className="text-center font-bold text-gray-300 py-0.5">News {i+1}</h3>
               <div className="flex-1 overflow-hidden text-xs lg:text-xl">
                {v}
               </div>

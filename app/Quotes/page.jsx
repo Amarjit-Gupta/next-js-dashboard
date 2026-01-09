@@ -22,7 +22,7 @@ const Quotes = () => {
     }, []);
 
     return (
-        <div className="h-[34%] border p-2 text-[16px] font-bold gradient-text">
+        <div className="h-[34%] border p-3 text-[16px] font-bold gradient-text">
             {quotes || ""}
         </div>
     );

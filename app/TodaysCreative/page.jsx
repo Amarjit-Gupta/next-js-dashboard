@@ -97,7 +97,7 @@ const TodaysCreative = () => {
             priority
           />
         </div> */}
-        <div className="w-full overflow-hidden rounded-lg border border-gray-200">
+        <div className="w-full overflow-hidden rounded-lg">
           <img
             src={imgURL[0]?.url}
             alt="image"
@@ -121,7 +121,7 @@ const TodaysCreative = () => {
           />
         </div> */}
 
-        <div className="w-full overflow-hidden rounded-lg border border-gray-200">
+        <div className="w-full overflow-hidden rounded-lg">
           <img
             src={imgURL[1]?.url}
             alt="image"

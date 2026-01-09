@@ -359,71 +359,71 @@ const KPI = () => {
 
   return (
     <div className="grid grid-cols-5 gap-4 h-full">
-      <div className="bg-white h-full rounded-xl p-3 border border-gray-200">
+      <div className="dark h-full rounded-xl p-3">
         {/* kpi1 */}
         <p>
-          <span className="text-gray-500 font-medium text-xs lg:text-sm">Total Leads</span>&nbsp;
+          <span className="text-gray-300 font-medium text-xs lg:text-sm">Total Leads</span>&nbsp;
           <span className="font-bold text-xs lg:text-2xl">
             {totalLeads ?? "--"}
           </span>
         </p>
         <p className="mt-1">
-          <span className="text-gray-500 font-medium text-xs lg:text-sm">Last month</span>
+          <span className="text-gray-300 font-medium text-xs lg:text-sm">Last month</span>
           <span className="font-bold text-xs lg:text-2xl ml-1">{ltotalLeads ?? "--"}</span>
         </p>
       </div>
       {/* kpi2 */}
-      <div className="bg-white h-full rounded-xl p-3 border border-gray-200">
+      <div className="dark h-full rounded-xl p-3">
         <p>
-          <span className="text-gray-500 font-medium text-xs lg:text-sm">Best Company</span>&nbsp;
+          <span className="text-gray-300 font-medium text-xs lg:text-sm">Best Company</span>&nbsp;
           <br />
           <span className="font-bold text-xs lg:text-2xl">{bestCompany ?? "--"}</span>
         </p>
       </div>
 
       {/* kpi3 */}
-      <div className="bg-white h-full rounded-xl p-3 border border-gray-200">
+      <div className="dark h-full rounded-xl p-3">
         <p>
-          <span className="text-gray-500 font-medium text-xs lg:text-sm">Best Product</span>&nbsp;
+          <span className="text-gray-300 font-medium text-xs lg:text-sm">Best Product</span>&nbsp;
           <br />
           <span className="font-bold text-xs lg:text-2xl">{bestProduct ?? "--"}</span>
         </p>
       </div>
 
       {/* kpi4 */}
-      <div className="bg-white h-full rounded-xl p-3 border border-gray-200">
+      <div className="dark h-full rounded-xl p-3">
         <p>
-          <span className="text-gray-500 font-medium text-xs lg:text-sm">Revenue Generated</span>&nbsp;
+          <span className="text-gray-300 font-medium text-xs lg:text-sm">Revenue Generated</span>&nbsp;
           <br />
           <span className="font-bold text-xs lg:text-2xl">{revenue ?? "--"}</span>
         </p>
       </div>
 
       {/* kpi5 */}
-      <div className="bg-white h-full rounded-xl border border-gray-200">
-        <div className="h-full p-1 lg:p-3 flex justify-between bg-white rounded-xl">
-          <div className=" flex flex-col justify-around bg-gray-100 rounded-lg px-1">
+      <div className="dark h-full rounded-xl">
+        <div className="h-full p-1 lg:p-3 flex justify-between dark rounded-xl">
+          <div className=" flex flex-col justify-around dark-card rounded-lg px-1">
             <div className=" p-1 rounded-full h-4 w-4 lg:h-8 lg:w-8 bg-[#4b7bf5]"></div>
             <div className=" text-[10px] lg:text-xl  font-medium text-center">{company[3]?.lead_count ?? "--"}</div>
             {/* "Personal Care" 1 */}
           </div>
-          <div className=" flex flex-col justify-around bg-gray-100 rounded-lg px-1">
+          <div className=" flex flex-col justify-around dark-card  rounded-lg px-1">
             <div className=" p-1 rounded-full h-4 w-4 lg:h-8 lg:w-8 bg-[#ff6caf]"></div>
             <div className="text-[10px] lg:text-xl font-medium text-center">{company[0]?.lead_count ?? "--"}</div>
             {/* "Nutraceuticals" 2 */}
           </div>
-          <div className=" flex flex-col justify-around bg-gray-100 rounded-lg px-1">
+          <div className=" flex flex-col justify-around dark-card  rounded-lg px-1">
             <div className=" p-1 rounded-full h-4 w-4 lg:h-8 lg:w-8 bg-[#04c56b]"></div>
             <div className=" text-[10px] lg:text-xl  font-medium text-center">{company[1]?.lead_count ?? "--"}</div>
             {/* "Pharmaceuticals" 3*/}
           </div>
-          <div className=" flex flex-col justify-around bg-gray-100 rounded-lg px-1">
+          <div className=" flex flex-col justify-around dark-card  rounded-lg px-1">
             <div className=" p-1 rounded-full h-4 w-4 lg:h-8 lg:w-8 bg-[#00b6cc]"></div>
             <div className=" text-[10px] lg:text-xl  font-medium text-center">{company[2]?.lead_count ?? "--"}</div>
             {/* "Other" 4*/}
           </div>
           
-          <div className=" flex flex-col justify-around bg-gray-100 rounded-lg px-1">
+          <div className=" flex flex-col justify-around dark-card  rounded-lg px-1">
             <div className=" p-1 rounded-full h-4 w-4 lg:h-8 lg:w-8 bg-[#ffcc00]"></div>
             <div className=" text-[10px] lg:text-xl  font-medium text-center">{company[4]?.lead_count ?? "--"}</div>
             {/* "Food & Beverages" 5*/}

@@ -330,9 +330,9 @@ const BarChartDouble = () => {
   console.log("web data ---",webData);
 
   return (
-    <div className="bg-white p-3 rounded-xl border w-full min-w-0 flex flex-col border-gray-200">
+    <div className="dark p-3 rounded-xl w-full min-w-0 flex flex-col">
       <h2 className="font-semibold mb-3">
-        <span className="text-gray-500 text-[10px] lg:text-lg">
+        <span className="text-gray-300 text-[10px] lg:text-lg">
           Active Users
         </span>
         &nbsp;&nbsp;
@@ -348,17 +348,17 @@ const BarChartDouble = () => {
           <XAxis
             dataKey="title"
             interval={0}
-            tick={{ fontSize: 10, fill: "black" }}
+            tick={{ fontSize: 10, fill: "white" }}
           />
 
           {/* Y Axis */}
           <YAxis
-            tick={{ fontSize: 10, fill: "black" }}
+            tick={{ fontSize: 10, fill: "white" }}
             tickFormatter={formatNumber}
           >
             <Label
               value="Impressions"
-              fill="black"
+              fill="white"
               angle={-90}
               position="insideLeft"
               style={{ textAnchor: "middle", fontSize: 14 }}
@@ -378,7 +378,7 @@ const BarChartDouble = () => {
               position="top"
               angle={-90}
               fontSize={10}
-              fill="black"
+              fill="white"
               formatter={formatNumber}
             />
           </Bar>
@@ -391,7 +391,7 @@ const BarChartDouble = () => {
               angle={-90}
               position="top"
               fontSize={10}
-              fill="black"
+              fill="white"
               formatter={formatNumber}
             />
           </Bar>
