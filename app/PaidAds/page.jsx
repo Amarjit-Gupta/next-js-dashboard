@@ -35,7 +35,7 @@ const PaidAds = () => {
                 setKeyword(keywordData ?? null);
             }
             else {
-                console.log("bounceRate api failed...");
+                console.log("keyword api failed...");
             }
 
             // 2
@@ -45,7 +45,7 @@ const PaidAds = () => {
                 setCampaign(campaignData ?? null);
             }
             else {
-                console.log("bounceRate api failed...");
+                console.log("campaign api failed...");
             }
 
             // 3
@@ -55,7 +55,7 @@ const PaidAds = () => {
                 setAdSpent(adSpentData?.total_ad_spend_rupees ?? null);
             }
             else {
-                console.log("bounceRate api failed...");
+                console.log("adSpent api failed...");
             }
 
             // 4
@@ -65,28 +65,8 @@ const PaidAds = () => {
                 setCompetitor(competitorData ?? null);
             }
             else {
-                console.log("bounceRate api failed...");
+                console.log("competitor api failed...");
             }
-
-            // // 5
-            // if (revenueRes.status === "fulfilled") {
-            //     const revenueData = await revenueRes.value.json();
-            //     // console.log("revenueData", revenueData);
-            //     setRevenue(revenueData?.product_of_interest ?? null);
-            // }
-            // else {
-            //     console.log("bounceRate api failed...");
-            // }
-
-            // // 6
-            // if (companyRes.status === "fulfilled") {
-            //     const companyData = await companyRes.value.json();
-            //     // console.log("companyData", companyData);
-            //     setCompany(companyData?.industries);
-            // }
-            // else {
-            //     console.log("bounceRate api failed...");
-            // }
 
         }
         catch (err) {

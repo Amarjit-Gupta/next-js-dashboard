@@ -49,7 +49,7 @@ const BounceRate = () => {
         setLbounceRate(lbounceRateData?.avg_bounce_rate_pct ?? null);
       }
       else {
-        console.log("bounceRate api failed...");
+        console.log("lbounceRate api failed...");
       }
 
       // 3
@@ -59,7 +59,7 @@ const BounceRate = () => {
         setEngTime(engTimeData?.avg_engagement_time_formatted ?? null);
       }
       else {
-        console.log("bounceRate api failed...");
+        console.log("engTime api failed...");
       }
 
       // 4
@@ -69,7 +69,7 @@ const BounceRate = () => {
         setLengTime(lengTimeData?.avg_engagement_time_formatted ?? null);
       }
       else {
-        console.log("bounceRate api failed...");
+        console.log("lengTime api failed...");
       }
 
       // 5
@@ -79,7 +79,7 @@ const BounceRate = () => {
         setClicks(clicksData?.total_clicks ?? null);
       }
       else {
-        console.log("bounceRate api failed...");
+        console.log("clicks api failed...");
       }
 
       // 6
@@ -89,7 +89,7 @@ const BounceRate = () => {
         setLclicks(lclicksData?.total_clicks ?? null);
       }
       else {
-        console.log("bounceRate api failed...");
+        console.log("lclicks api failed...");
       }
 
     }

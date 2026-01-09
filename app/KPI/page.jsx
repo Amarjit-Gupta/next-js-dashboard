@@ -283,7 +283,7 @@ const KPI = () => {
         setTotalLeads(totalLeadsData?.total_leads ?? null);
       }
       else {
-        console.log("bounceRate api failed...");
+        console.log("totalLeads api failed...");
       }
 
       // 2
@@ -293,7 +293,7 @@ const KPI = () => {
         setLTotalLeads(ltotalLeadsData?.total_leads ?? null);
       }
       else {
-        console.log("bounceRate api failed...");
+        console.log("ltotalLeads api failed...");
       }
 
       // 3
@@ -303,7 +303,7 @@ const KPI = () => {
         setBestCompany(bestCompanyData?.company_account ?? null);
       }
       else {
-        console.log("bounceRate api failed...");
+        console.log("bestCompany api failed...");
       }
 
       // 4
@@ -313,7 +313,7 @@ const KPI = () => {
         setBestProduct(bestProductData?.product_of_interest ?? null);
       }
       else {
-        console.log("bounceRate api failed...");
+        console.log("bestProduct api failed...");
       }
 
       // 5
@@ -321,10 +321,10 @@ const KPI = () => {
         const revenueData = await revenueRes.value.json();
         // console.log("revenueData", revenueData);
         // setRevenue(revenueData?.product_of_interest ?? null);
-         setRevenue(null ?? null);
+        setRevenue(null ?? null);  // update revenue API
       }
       else {
-        console.log("bounceRate api failed...");
+        console.log("revenue api failed...");
       }
 
       // 6
@@ -334,7 +334,7 @@ const KPI = () => {
         setCompany(companyData?.industries);
       }
       else {
-        console.log("bounceRate api failed...");
+        console.log("company api failed...");
       }
 
     }
@@ -373,31 +373,34 @@ const KPI = () => {
         </p>
       </div>
       {/* kpi2 */}
-      <div className="dark h-full rounded-xl p-3">
+      {/* <div className="dark h-full rounded-xl p-3">
         <p>
           <span className="text-gray-300 font-medium text-xs lg:text-sm">Best Company</span>&nbsp;
           <br />
           <span className="font-bold text-xs lg:text-2xl">{bestCompany ?? "--"}</span>
         </p>
-      </div>
+      </div> */}
+      <KPIComponent txt={'Best Company'} val={bestCompany ?? "--"}/>
 
       {/* kpi3 */}
-      <div className="dark h-full rounded-xl p-3">
+      {/* <div className="dark h-full rounded-xl p-3">
         <p>
           <span className="text-gray-300 font-medium text-xs lg:text-sm">Best Product</span>&nbsp;
           <br />
           <span className="font-bold text-xs lg:text-2xl">{bestProduct ?? "--"}</span>
         </p>
-      </div>
+      </div> */}
+      <KPIComponent txt={'Best Product'} val={bestProduct ?? "--"}/>
 
       {/* kpi4 */}
-      <div className="dark h-full rounded-xl p-3">
+      {/* <div className="dark h-full rounded-xl p-3">
         <p>
           <span className="text-gray-300 font-medium text-xs lg:text-sm">Revenue Generated</span>&nbsp;
           <br />
           <span className="font-bold text-xs lg:text-2xl">{revenue ?? "--"}</span>
         </p>
-      </div>
+      </div> */}
+      <KPIComponent txt={'Revenue Generated'} val={revenue ?? "--"}/>
 
       {/* kpi5 */}
       <div className="dark h-full rounded-xl">
@@ -422,7 +425,7 @@ const KPI = () => {
             <div className=" text-[10px] lg:text-xl  font-medium text-center">{company[2]?.lead_count ?? "--"}</div>
             {/* "Other" 4*/}
           </div>
-          
+
           <div className=" flex flex-col justify-around dark-card  rounded-lg px-1">
             <div className=" p-1 rounded-full h-4 w-4 lg:h-8 lg:w-8 bg-[#ffcc00]"></div>
             <div className=" text-[10px] lg:text-xl  font-medium text-center">{company[4]?.lead_count ?? "--"}</div>
@@ -438,3 +441,16 @@ const KPI = () => {
 };
 
 export default KPI;
+
+
+const KPIComponent = ({txt,val}) => {
+  return (
+    <div className="dark h-full rounded-xl p-3">
+      <p>
+        <span className="text-gray-300 font-medium text-xs lg:text-sm">{txt}</span>&nbsp;
+        <br />
+        <span className="font-bold text-xs lg:text-2xl">{val}</span>
+      </p>
+    </div>
+  );
+}
