@@ -1,6 +1,6 @@
 "use client"
 import { useEffect, useState } from 'react';
-
+import toast from 'react-hot-toast';
 const TodaysCreative = () => {
 
   const [imgURL, setImgURL] = useState([]);
@@ -13,7 +13,8 @@ const TodaysCreative = () => {
       setImgURL(data?.images);
     }
     catch (err) {
-      console.log("something went wrong...");
+      // console.log("something went wrong...");
+      toast.error('something went wrong...',{duration:3000,position:"bottom-right"});
     }
   }
 
@@ -21,7 +22,7 @@ const TodaysCreative = () => {
     getImageURL();
   }, []);
 
-  // console.log("im",imgURL);
+  // console.log("img",imgURL);
 
   return (
     <div className="h-full flex flex-col overflow-hidden">

@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import {BarChart,Bar,XAxis,YAxis,Tooltip,ResponsiveContainer,LabelList,Legend,Label,} from "recharts";
+import toast from 'react-hot-toast';
 
 const formatNumber = (value) => {
   const num = Number(value);
@@ -38,7 +39,8 @@ const BarChartSingle = () => {
       }
       setImpression(data?.total_impressions_all ?? null);
     } catch (err) {
-      console.log("something went wrong...");
+     // console.log("something went wrong...");
+      toast.error('something went wrong...',{duration:3000,position:"bottom-right"});
     }
   };
 

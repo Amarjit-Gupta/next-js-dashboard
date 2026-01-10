@@ -1,5 +1,6 @@
 "use client"
 import { useEffect, useState } from "react";
+import toast from 'react-hot-toast';
 
 const Quotes = () => {
 
@@ -13,7 +14,8 @@ const Quotes = () => {
             setQuotes(data?.quote);
         }
         catch (err) {
-            console.log("something went wrong...");
+            // console.log("something went wrong...");
+            toast.error('something went wrong...',{duration:3000,position:"bottom-right"});
         }
     }
 

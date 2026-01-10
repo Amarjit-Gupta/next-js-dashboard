@@ -3,8 +3,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { useEffect, useState } from "react";
+import toast from 'react-hot-toast';
 
-function CarouselComponent() {
+const CarouselComponent = () => {
 
   const settings = {
     arrows: false,
@@ -30,7 +31,8 @@ const [newsData, setNewsData] = useState([]);
      // console.log(newsArray);
     }
     catch (err) {
-      console.log("something went wrong...");
+     // console.log("something went wrong...");
+      toast.error('something went wrong...',{duration:3000,position:"bottom-right"});
     }
   }
 
@@ -43,7 +45,7 @@ const [newsData, setNewsData] = useState([]);
       <Slider {...settings} className="h-full dark-card">
         {newsData?.map((txt, i) => {
           return (
-            <div className="h-full flex items-center justify-center rounded-lg p-2">
+            <div className="h-full flex items-center justify-center rounded-lg p-2" key={i}>
               <h3 className="text-center font-bold text-gray-300 py-0.5">News {i+1}</h3>
               <div className="flex-1 overflow-hidden text-xs lg:text-xl">
                {txt}

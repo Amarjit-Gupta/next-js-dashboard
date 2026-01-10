@@ -1,6 +1,7 @@
 "use client"
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import toast from 'react-hot-toast';
 
 const BounceRate = () => {
 
@@ -29,7 +30,8 @@ const BounceRate = () => {
         setBounceRate(bounceRateData?.avg_bounce_rate_pct ?? null);
       }
       else {
-        console.log("bounceRate api failed...");
+       // console.log("bounceRate api failed...");
+        toast.error('bounceRate api failed...',{duration:3000,position:"bottom-right"});
       }
 
       // 2
@@ -39,7 +41,8 @@ const BounceRate = () => {
         setLbounceRate(lbounceRateData?.avg_bounce_rate_pct ?? null);
       }
       else {
-        console.log("lbounceRate api failed...");
+        // console.log("lbounceRate api failed...");
+        toast.error('last bounceRate api failed...',{duration:3000,position:"bottom-right"});
       }
 
       // 3
@@ -49,7 +52,8 @@ const BounceRate = () => {
         setEngTime(engTimeData?.avg_engagement_time_formatted ?? null);
       }
       else {
-        console.log("engTime api failed...");
+       // console.log("engTime api failed...");
+        toast.error('engTime api failed...',{duration:3000,position:"bottom-right"});
       }
 
       // 4
@@ -59,7 +63,8 @@ const BounceRate = () => {
         setLengTime(lengTimeData?.avg_engagement_time_formatted ?? null);
       }
       else {
-        console.log("lengTime api failed...");
+       // console.log("lengTime api failed...");
+        toast.error('last engTime api failed...',{duration:3000,position:"bottom-right"});
       }
 
       // 5
@@ -69,7 +74,8 @@ const BounceRate = () => {
         setClicks(clicksData?.total_clicks ?? null);
       }
       else {
-        console.log("clicks api failed...");
+       // console.log("clicks api failed...");
+        toast.error('clicks api failed...',{duration:3000,position:"bottom-right"});
       }
 
       // 6
@@ -79,11 +85,13 @@ const BounceRate = () => {
         setLclicks(lclicksData?.total_clicks ?? null);
       }
       else {
-        console.log("lclicks api failed...");
+       // console.log("lclicks api failed...");
+        toast.error('last clicks api failed...',{duration:3000,position:"bottom-right"});
       }
     }
     catch (err) {
-      console.log("something went wrong...");
+     // console.log("something went wrong...");
+      toast.error('something went wrong...',{duration:3000,position:"bottom-right"});
     }
   }
 

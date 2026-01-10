@@ -1,6 +1,6 @@
 "use client"
 import { useEffect, useState } from "react";
-
+import toast from 'react-hot-toast';
 const PaidAds = () => {
 
     const [keyword, setKeyword] = useState(null);
@@ -24,7 +24,8 @@ const PaidAds = () => {
                 setKeyword(keywordData ?? null);
             }
             else {
-                console.log("keyword api failed...");
+                // console.log("keyword api failed...");
+                toast.error('keyword api failed...',{duration:3000,position:"bottom-right"});
             }
 
             // 2
@@ -34,7 +35,8 @@ const PaidAds = () => {
                 setCampaign(campaignData ?? null);
             }
             else {
-                console.log("campaign api failed...");
+                // console.log("campaign api failed...");
+                toast.error('campaign api failed...',{duration:3000,position:"bottom-right"});
             }
 
             // 3
@@ -44,7 +46,8 @@ const PaidAds = () => {
                 setAdSpent(adSpentData?.total_ad_spend_rupees ?? null);
             }
             else {
-                console.log("adSpent api failed...");
+                // console.log("adSpent api failed...");
+                toast.error('adSpent api failed...',{duration:3000,position:"bottom-right"});
             }
 
             // 4
@@ -54,11 +57,13 @@ const PaidAds = () => {
                 setCompetitor(competitorData ?? null);
             }
             else {
-                console.log("competitor api failed...");
+                // console.log("competitor api failed...");
+                toast.error('competitor api failed...',{duration:3000,position:"bottom-right"});
             }
         }
         catch (err) {
-            console.log("something went wrong...");
+            // console.log("something went wrong...");
+            toast.error('something went wrong...',{duration:3000,position:"bottom-right"});
         }
     }
 
@@ -73,11 +78,11 @@ const PaidAds = () => {
             <div className="flex-1 grid grid-cols-2 gap-2">
                 <div className=" flex flex-col justify-center px-1 dark-card rounded-lg">
                     <p className="text-gray-300 text-[8px] lg:text-sm wrap-break-word">Keyword</p>
-                    <p className="text-[6px] lg:text-lg">{keyword ?? "--"}</p>
+                    <p className="text-[6px] lg:text-sm">{keyword ?? "--"}</p>
                 </div>
                 <div className=" flex flex-col justify-center px-1 dark-card rounded-lg">
                     <p className="text-gray-300 text-[8px] lg:text-sm wrap-break-word">Campaign</p>
-                    <p className="text-[8px] lg:text-lg">{campaign ?? "--"}</p>
+                    <p className="text-[8px] lg:text-sm">{campaign ?? "--"}</p>
                 </div>
                 <div className=" flex flex-col justify-center px-1 dark-card rounded-lg">
                     <p className="text-gray-300 text-[8px] lg:text-sm">Ad Spent</p>

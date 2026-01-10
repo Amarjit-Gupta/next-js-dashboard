@@ -1,5 +1,6 @@
 "use client"
 import { useEffect, useState } from "react";
+import toast from 'react-hot-toast';
 
 const KPI = () => {
 
@@ -28,7 +29,8 @@ const KPI = () => {
         setTotalLeads(totalLeadsData?.total_leads ?? null);
       }
       else {
-        console.log("totalLeads api failed...");
+        // console.log("totalLeads api failed...");
+        toast.error('totalLeads api failed...',{duration:3000,position:"bottom-right"});
       }
 
       // 2
@@ -38,7 +40,8 @@ const KPI = () => {
         setLTotalLeads(ltotalLeadsData?.total_leads ?? null);
       }
       else {
-        console.log("ltotalLeads api failed...");
+       // console.log("ltotalLeads api failed...");
+        toast.error('last totalLeads api failed...',{duration:3000,position:"bottom-right"});
       }
 
       // 3
@@ -48,7 +51,8 @@ const KPI = () => {
         setBestCompany(bestCompanyData?.company_account ?? null);
       }
       else {
-        console.log("bestCompany api failed...");
+        // console.log("bestCompany api failed...");
+        toast.error('bestCompany api failed...',{duration:3000,position:"bottom-right"});
       }
 
       // 4
@@ -58,7 +62,8 @@ const KPI = () => {
         setBestProduct(bestProductData?.product_of_interest ?? null);
       }
       else {
-        console.log("bestProduct api failed...");
+        // console.log("bestProduct api failed...");
+        toast.error('bestProduct api failed...',{duration:3000,position:"bottom-right"});
       }
 
       // 5
@@ -69,7 +74,8 @@ const KPI = () => {
         setRevenue(null ?? null);  // update revenue API
       }
       else {
-        console.log("revenue api failed...");
+        // console.log("revenue api failed...");
+        toast.error('revenue api failed...',{duration:3000,position:"bottom-right"});
       }
 
       // 6
@@ -79,12 +85,14 @@ const KPI = () => {
         setCompany(companyData?.industries);
       }
       else {
-        console.log("company api failed...");
+        // console.log("company api failed...");
+        toast.error('company api failed...',{duration:3000,position:"bottom-right"});
       }
 
     }
     catch (err) {
-      console.log("something went wrong...");
+      // console.log("something went wrong...");
+      toast.error('something went wrong...',{duration:3000,position:"bottom-right"});
     }
   }
 
