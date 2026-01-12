@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import toast from 'react-hot-toast';
+import { backend_url } from "../URL";
 
 const BounceRate = () => {
 
@@ -15,12 +16,12 @@ const BounceRate = () => {
   const getBECData = async () => {
     try {
       let [bounceRateRes, lbounceRateRes, engTimeRes, lengTimeRes, clicksRes, lclicksRes] = await Promise.allSettled([
-        fetch("https://marketing-dashboard.integerstech.com/analyze/bounce-rate/current-month"),
-        fetch("https://marketing-dashboard.integerstech.com/analyze/bounce-rate/previous-month"),
-        fetch("https://marketing-dashboard.integerstech.com/analyze/engagement-time/current-month"),
-        fetch("https://marketing-dashboard.integerstech.com/analyze/engagement-time/previous-month"),
-        fetch("https://marketing-dashboard.integerstech.com/analyze/clicks/current-month"),
-        fetch("https://marketing-dashboard.integerstech.com/analyze/clicks/previous-month"),
+        fetch(`${backend_url}/analyze/bounce-rate/current-month`),
+        fetch(`${backend_url}/analyze/bounce-rate/previous-month`),
+        fetch(`${backend_url}/analyze/engagement-time/current-month`),
+        fetch(`${backend_url}/analyze/engagement-time/previous-month`),
+        fetch(`${backend_url}/analyze/clicks/current-month`),
+        fetch(`${backend_url}/analyze/clicks/previous-month`),
       ]);
 
       // 1

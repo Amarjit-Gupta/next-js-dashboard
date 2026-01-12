@@ -1,6 +1,7 @@
 "use client"
 import { useEffect, useState } from "react";
 import toast from 'react-hot-toast';
+import { backend_url } from "../URL";
 
 const Quotes = () => {
 
@@ -8,7 +9,7 @@ const Quotes = () => {
 
     const getQuotes = async () => {
         try {
-            let result = await fetch("https://marketing-dashboard.integerstech.com/analyze/quote/today");
+            let result = await fetch(`${backend_url}/analyze/quote/today`);
             let data = await result.json();
            // console.log("quote: ",data?.quote);
             setQuotes(data?.quote);

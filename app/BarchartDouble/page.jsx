@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, LabelList, Legend, Label } from "recharts";
 import toast from 'react-hot-toast';
+import { backend_url } from "../URL";
 
 const formatNumber = (value) => {
   const num = Number(value);
@@ -27,7 +28,7 @@ const BarChartDouble = () => {
   const getWebData = async () => {
     try {
       const result = await fetch(
-        "https://marketing-dashboard.integerstech.com/analyze/active-users/umang-websites/monthly-comparison"
+        `${backend_url}/analyze/active-users/umang-websites/monthly-comparison`
       );
       const data = await result.json();
 

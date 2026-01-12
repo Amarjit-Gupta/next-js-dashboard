@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import {BarChart,Bar,XAxis,YAxis,Tooltip,ResponsiveContainer,LabelList,Legend,Label,} from "recharts";
 import toast from 'react-hot-toast';
+import { backend_url } from "../URL";
 
 const formatNumber = (value) => {
   const num = Number(value);
@@ -27,7 +28,7 @@ const BarChartSingle = () => {
   const getSocialData = async () => {
     try {
       const result = await fetch(
-        "https://marketing-dashboard.integerstech.com/analyze/social/impressions/current-month"
+        `${backend_url}/analyze/social/impressions/current-month`
       );
       const data = await result.json();
       if (Array.isArray(data?.platforms)) {

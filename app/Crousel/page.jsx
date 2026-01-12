@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { useEffect, useState } from "react";
 import toast from 'react-hot-toast';
+import { backend_url } from "../URL";
 
 const CarouselComponent = () => {
 
@@ -21,7 +22,7 @@ const [newsData, setNewsData] = useState([]);
 
   const getNews = async () => {
     try {
-      let result = await fetch("https://marketing-dashboard.integerstech.com/analyze/trends/global-news/latest");
+      let result = await fetch(`${backend_url}/analyze/trends/global-news/latest`);
       let data = await result.json();
       const newsArray = data
         .split("\n")                 

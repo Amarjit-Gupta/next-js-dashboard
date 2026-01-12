@@ -1,13 +1,14 @@
 "use client"
 import { useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
+import { backend_url } from '../URL';
 const TodaysCreative = () => {
 
   const [imgURL, setImgURL] = useState([]);
 
   const getImageURL = async () => {
     try {
-      let result = await fetch("https://marketing-dashboard.integerstech.com/analyze/daily-creatives");
+      let result = await fetch(`${backend_url}/analyze/daily-creatives`);
       let data = await result.json();
       // console.log("iamges: ",data?.images);
       setImgURL(data?.images);

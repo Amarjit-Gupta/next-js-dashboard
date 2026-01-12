@@ -1,6 +1,7 @@
 "use client"
 import { useEffect, useState } from "react";
 import toast from 'react-hot-toast';
+import { backend_url } from "../URL";
 
 const Emailer = () => {
 
@@ -8,7 +9,7 @@ const Emailer = () => {
 
     const getEmailerData = async () => {
         try {
-            let result = await fetch("https://marketing-dashboard.integerstech.com/analyze/emailer/performance/current-month");
+            let result = await fetch(`${backend_url}/analyze/emailer/performance/current-month`);
             let eData = await result.json();
             // console.log("Emailer data: ",eData);
             setEmailerData(eData ?? null);

@@ -1,6 +1,7 @@
 "use client"
 import { useEffect, useState } from "react";
 import toast from 'react-hot-toast';
+import { backend_url } from "../URL";
 
 const KPI = () => {
 
@@ -14,12 +15,12 @@ const KPI = () => {
   const getKPIData = async () => {
     try {
       let [totalLeadsRes, ltotalLeadsRes, bestCompanyRes, bestProductRes, revenueRes, companyRes] = await Promise.allSettled([
-        fetch("https://marketing-dashboard.integerstech.com/analyze/leads/current-month"),
-        fetch("https://marketing-dashboard.integerstech.com/analyze/leads/previous-month"),
-        fetch("https://marketing-dashboard.integerstech.com/analyze/leads/top-company/current-month"),
-        fetch("https://marketing-dashboard.integerstech.com/analyze/leads/top-product/current-month"),
-        fetch("https://marketing-dashboard.integerstech.com/analyze/leads/top-product/current-month"),  // revenue
-        fetch("https://marketing-dashboard.integerstech.com/analyze/leads/industries/current-month"),
+        fetch(`${backend_url}/analyze/leads/current-month`),
+        fetch(`${backend_url}/analyze/leads/previous-month`),
+        fetch(`${backend_url}/analyze/leads/top-company/current-month`),
+        fetch(`${backend_url}/analyze/leads/top-product/current-month`),
+        fetch(`${backend_url}/analyze/leads/top-product/current-month`),  // revenue
+        fetch(`${backend_url}/analyze/leads/industries/current-month`),
       ]);
 
       // 1

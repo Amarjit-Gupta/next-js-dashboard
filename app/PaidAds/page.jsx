@@ -1,6 +1,7 @@
 "use client"
 import { useEffect, useState } from "react";
 import toast from 'react-hot-toast';
+import { backend_url } from "../URL";
 const PaidAds = () => {
 
     const [keyword, setKeyword] = useState(null);
@@ -11,10 +12,10 @@ const PaidAds = () => {
     const getKPIData = async () => {
         try {
             let [keywordRes, campaignRes, adSpentRes, competitorRes] = await Promise.allSettled([
-                fetch("https://marketing-dashboard.integerstech.com/analyze/keyword/today"),
-                fetch("https://marketing-dashboard.integerstech.com/analyze/campaign/today"),
-                fetch("https://marketing-dashboard.integerstech.com/analyze/ad-spend/current-month"),
-                fetch("https://marketing-dashboard.integerstech.com/analyze/competitor/today")
+                fetch(`${backend_url}/analyze/keyword/today`),
+                fetch(`${backend_url}/analyze/campaign/today`),
+                fetch(`${backend_url}/analyze/ad-spend/current-month`),
+                fetch(`${backend_url}/analyze/competitor/today`)
             ]);
 
             // 1
