@@ -8,4 +8,4 @@
 
 // export const backend_url = "https://shut-marker-dsc-accounts.trycloudflare.com";
 
-export const backend_url = "https://considers-modems-sensitive-specify.trycloudflare.com";
+export const backend_url = "https://marketingdashboard-production-bd4d.up.railway.app";
