@@ -8,4 +8,4 @@
 
 // export const backend_url = "https://shut-marker-dsc-accounts.trycloudflare.com";
 
-export const backend_url = "https://cambridge-supplier-knee-awesome.trycloudflare.com";
+export const backend_url = "https://cas-detective-struck-trustees.trycloudflare.com";
