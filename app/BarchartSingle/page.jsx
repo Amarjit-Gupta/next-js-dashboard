@@ -7,7 +7,7 @@ import { backend_url } from "../URL";
 const formatNumber = (value) => {
   const num = Number(value);
   if (!num) return "0";
-  if (num >= 1000) return `${Math.floor(num / 1000)}k`;
+  if (num >= 1000) return (num / 1000).toFixed(1).replace(".0","") + "k";
   return num.toString();
 };
 
