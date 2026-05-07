@@ -1,1 +1,1 @@
-export const backend_url = "https://marketingdashboard-production-bd4d.up.railway.app";
+export const backend_url="https://daily-dashboard.integerstech.com"
